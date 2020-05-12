@@ -7,24 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00ffa6b8-0f87-4a2b-bd39-627e044c5920" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/StaticMenus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/database/LoadInvAndItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/database/LoadInvAndItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/InvShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/InvShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/ItemShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/ItemShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/utils/Menus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/Menus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/commands/PlayerCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/commands/PlayerCommands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/database/LoadInvAndItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/database/LoadInvAndItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/InvShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/InvShop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/ItemShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/ItemShop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/InventoryEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/InventoryEvents.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/utils/Menus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +91,7 @@
       <workItem from="1589170163608" duration="1789000" />
       <workItem from="1589171968909" duration="3407000" />
       <workItem from="1589208399533" duration="22131000" />
-      <workItem from="1589244418570" duration="12662000" />
+      <workItem from="1589244418570" duration="12731000" />
     </task>
     <servers />
   </component>
