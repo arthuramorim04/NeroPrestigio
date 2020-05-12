@@ -1,0 +1,82 @@
+shop:
+  basica:
+    name: "&bItens Basicos"
+    id: 35
+    data: 4
+    slot: 3
+    glow: true
+    lore:
+      - '&eCompre itens basicos'
+    items:
+      3:
+        name: "&eEspada"
+        id: 276
+        data: 0
+        glow: true
+        amount: 3
+        slot: 1
+        prive: 1000
+        enchants:
+          - 'FIRE_ASPECT,400'
+          - 'DURABILITY,100'
+        lore: []
+      4:
+        name: "&eEspada"
+        id: 271
+        data: 0
+        glow: true
+        slot: 2
+        prive: 1000
+        amount: 3
+        enchants:
+          - 'FIRE_ASPECT,400'
+          - 'DURABILITY,100'
+        lore: []
+
+      5:
+        name: "&eEspada"
+        id: 1
+        data: 0
+        glow: true
+        slot: 3
+        prive: 1000
+        amount: 3
+        enchants:
+          - 'FIRE_ASPECT,400'
+          - 'DURABILITY,100'
+        lore: []
+
+      6:
+        name: "&eEspada"
+        id: 6
+        data: 0
+        glow: true
+        slot: 4
+        prive: 1000
+        amount: 3
+        enchants:
+          - 'FIRE_ASPECT,400'
+          - 'DURABILITY,100'
+        lore: []
+  avancada:
+    name: "&bCaixa Avancada"
+    id: 385
+    data: 0
+    slot: 5
+    glow: true
+    lore:
+      - '&eCaixa tipo: &fBasica'
+      - '&eRaridade: &fComum'
+    items:
+      3:
+        name: "&eEspada"
+        id: 276
+        data: 0
+        glow: true
+        slot: 0
+        prive: 1000
+        amount: 3
+        enchants:
+          - 'FIRE_ASPECT,400'
+          - 'DURABILITY,100'
+        lore: []

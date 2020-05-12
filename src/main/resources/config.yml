@@ -1,0 +1,22 @@
+storage:
+  user: 'arthur'
+  pass: '1234'
+  host: 'localhost'
+  db: 'neroplugins'
+  port: 3306
+  table: 'neroprestige'
+
+lores:
+  prestigeButtomMenu:
+    - '&eClique para realizar um Prestigio'
+    - ''
+    - '&cObs: &eVoce deve estar no ultimo rank'
+    - '&cObs2: &eAo realizar o prestigio voce recebera'
+    - '&e +1 prestigio e pontos de prestigio. Alem disso'
+    - '&evoce sera enviado para o primeiro rank.'
+  prestigeShopMenu:
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''

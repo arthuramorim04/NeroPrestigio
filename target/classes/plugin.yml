@@ -1,0 +1,13 @@
+name: NeroPrestigio
+main: com.arthuramorim.Main
+version: 1.2
+author: KingN3R0
+
+commands:
+  ppoints:
+  prestigios:
+  prestigio:
+  addppoints:
+  setppoints:
+  addprestige:
+  setprestige:
