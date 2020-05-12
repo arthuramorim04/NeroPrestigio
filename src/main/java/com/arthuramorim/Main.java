@@ -44,6 +44,8 @@ public class Main extends JavaPlugin {
 
         LoadInvAndItems.loadInvShop();
 
+//        Menus.createInvetorys(LoadInvAndItems.getShopHash());
+
         System.out.println(LoadInvAndItems.getShopHash().toString());
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "["+plugin.getName()+"]" +"INICIALIZADO COM SUCESSO!");
 

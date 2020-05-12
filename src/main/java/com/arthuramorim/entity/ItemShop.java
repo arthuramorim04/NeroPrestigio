@@ -4,25 +4,16 @@ import org.bukkit.inventory.ItemStack;
 
 public class ItemShop {
 
-    private static String name;
     private static ItemStack items;
     private static Integer slot;
     private static Integer price;
 
-    public ItemShop(String name, ItemStack items, Integer slot, Integer price) {
-        this.name = name;
+    public ItemShop(ItemStack items, Integer slot, Integer price) {
         this.items = items;
         this.slot = slot;
         this.price = price;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public ItemStack getItems() {
         return items;

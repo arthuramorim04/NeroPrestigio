@@ -1,7 +1,8 @@
 package com.arthuramorim.events;
 
-import com.arthuramorim.commands.PlayerCommands;
-import com.arthuramorim.utils.Menus;
+import com.arthuramorim.database.LoadInvAndItems;
+import com.arthuramorim.menus.Menus;
+import com.arthuramorim.menus.StaticMenus;
 import com.arthuramorim.utils.StringColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -35,7 +36,7 @@ public class InventoryEvents implements Listener {
                     }
                 }
                 if(e.getCurrentItem().isSimilar(Menus.prestigeShop.build())){
-
+                    p.openInventory(StaticMenus.createInventory(LoadInvAndItems.getShopHash()));
                 }
             }else{
                 e.setCancelled(true);

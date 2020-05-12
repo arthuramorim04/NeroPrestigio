@@ -1,20 +1,14 @@
 package com.arthuramorim.commands;
 
 import com.arthuramorim.Main;
-import com.arthuramorim.controllers.PlayerController;
 import com.arthuramorim.entity.PrestigePlayer;
-import com.arthuramorim.utils.MakeItem;
-import com.arthuramorim.utils.Menus;
+import com.arthuramorim.menus.Menus;
 import com.arthuramorim.utils.StringColor;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
-
-import java.awt.*;
 
 public class PlayerCommands implements CommandExecutor {
 

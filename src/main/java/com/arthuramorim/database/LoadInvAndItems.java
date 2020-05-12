@@ -7,7 +7,6 @@ import com.arthuramorim.utils.MakeItem;
 import com.arthuramorim.utils.StringColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,7 +16,7 @@ public class LoadInvAndItems {
 
     private static FileConfiguration customConfig = Configs.getShop();
 
-    private static ArrayList<InvShop> invsShopHash = new ArrayList<>();
+    private static ArrayList<InvShop> arrayInvs = new ArrayList<>();
 
     private static void loadInvsShop(){
 
@@ -48,26 +47,25 @@ public class LoadInvAndItems {
 
                     invShop.setName(StringColor.color(invName));
 
-                    ArrayList<ItemShop> items = carregaItems(invName);
+                    HashMap<Integer,ItemShop> items = carregaItems(invName);
 
                     invShop.setItemsVenda(items);
 
-                    invsShopHash.add(invShop);
+                    arrayInvs.add(invShop);
                 });
 
 
     }
 
 
-    private static ArrayList<ItemShop> carregaItems(String invName){
+    private static HashMap<Integer,ItemShop> carregaItems(String invName){
 
-        ArrayList<ItemShop> arrayItems = new ArrayList<>();
+        HashMap<Integer,ItemShop> hashMapItems = new HashMap<>();
 
         customConfig.getConfigurationSection("shop."+invName+".items").getKeys(false)
                 .forEach(items-> {
 
                     String path = "shop."+invName+ ".items."+items;
-
                     String nome = customConfig.getString(path + ".name");
                     Integer id = customConfig.getInt(path + ".id");
                     int dataItem = customConfig.getInt(path + ".data");
@@ -95,18 +93,18 @@ public class LoadInvAndItems {
                         }
                     });
 
-                    ItemShop itemShop = new ItemShop(nome,item.build(),slot,price);
+                    ItemShop itemShop = new ItemShop(item.build(),slot,price);
 
-                    arrayItems.add(itemShop);
+                    hashMapItems.put(itemShop.getSlot(),itemShop);
 
 
                 });
 
-        return arrayItems;
+        return hashMapItems;
     }
 
     public static ArrayList<InvShop> getShopHash(){
-        return invsShopHash;
+        return arrayInvs;
     }
 
     public static void loadInvShop(){

@@ -5,9 +5,16 @@ author: KingN3R0
 
 commands:
   ppoints:
+    description:
   prestigios:
+    description:
   prestigio:
+    description:
   addppoints:
+    description:
   setppoints:
+    description:
   addprestige:
+    description:
   setprestige:
+    description:

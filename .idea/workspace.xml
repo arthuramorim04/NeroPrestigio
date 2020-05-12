@@ -6,7 +6,26 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ffa6b8-0f87-4a2b-bd39-627e044c5920" name="Default Changelist" comment="" />
+    <list default="true" id="00ffa6b8-0f87-4a2b-bd39-627e044c5920" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/StaticMenus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/database/LoadInvAndItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/database/LoadInvAndItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/InvShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/InvShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/ItemShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/ItemShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/utils/Menus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/Menus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/commands/PlayerCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/commands/PlayerCommands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/database/LoadInvAndItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/database/LoadInvAndItems.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/InvShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/InvShop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/ItemShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/ItemShop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/InventoryEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/InventoryEvents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/utils/Menus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +42,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -34,6 +56,7 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1bXOUyNkP4qURSiyiE9vj4tnAfY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -84,7 +107,8 @@
       <workItem from="1589168940396" duration="1117000" />
       <workItem from="1589170163608" duration="1789000" />
       <workItem from="1589171968909" duration="3407000" />
-      <workItem from="1589208399533" duration="21932000" />
+      <workItem from="1589208399533" duration="22131000" />
+      <workItem from="1589244418570" duration="12662000" />
     </task>
     <servers />
   </component>
@@ -104,11 +128,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="732" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1588788766968" />
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1589242227584">
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1589246092146">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1588790439595" />
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589242227584" />
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589246092146" />
     <state x="640" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588808111402">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -117,22 +141,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589144960466" />
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom" timestamp="1589240830168">
+    <state width="1877" height="293" key="GridCell.Tab.0.bottom" timestamp="1589242762685">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589240830168" />
-    <state width="1877" height="293" key="GridCell.Tab.0.center" timestamp="1589240830168">
+    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589242762685" />
+    <state width="1877" height="293" key="GridCell.Tab.0.center" timestamp="1589242762685">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589240830168" />
-    <state width="1877" height="293" key="GridCell.Tab.0.left" timestamp="1589240830168">
+    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589242762685" />
+    <state width="1877" height="293" key="GridCell.Tab.0.left" timestamp="1589242762685">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589240830168" />
-    <state width="1877" height="293" key="GridCell.Tab.0.right" timestamp="1589240830168">
+    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589242762685" />
+    <state width="1877" height="293" key="GridCell.Tab.0.right" timestamp="1589242762685">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589240830168" />
+    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589242762685" />
     <state x="440" y="99" key="SettingsEditor" timestamp="1589169559560">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

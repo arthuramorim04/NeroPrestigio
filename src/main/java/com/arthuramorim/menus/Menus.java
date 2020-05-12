@@ -1,13 +1,21 @@
-package com.arthuramorim.utils;
+package com.arthuramorim.menus;
 
 import com.arthuramorim.Main;
+import com.arthuramorim.database.LoadInvAndItems;
+import com.arthuramorim.entity.InvShop;
+import com.arthuramorim.entity.ItemShop;
 import com.arthuramorim.entity.PrestigePlayer;
+import com.arthuramorim.utils.Configs;
+import com.arthuramorim.utils.MakeItem;
+import com.arthuramorim.utils.StringColor;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Menus {
@@ -73,15 +81,6 @@ public class Menus {
 
         }
        p.openInventory(prestigeMainMenu);
-    }
-
-
-    public static void shopPage(){
-        Bukkit.createInventory(null,9*6,"&bPrestigio Shop");
-    }
-
-    public static void createInvetorys(){
-
     }
 
 
