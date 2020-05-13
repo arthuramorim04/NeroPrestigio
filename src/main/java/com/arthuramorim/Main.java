@@ -46,7 +46,7 @@ public class Main extends JavaPlugin {
 
 //        Menus.createInvetorys(LoadInvAndItems.getShopHash());
 
-        System.out.println(LoadInvAndItems.getShopHash().toString());
+        System.out.println(LoadInvAndItems.getArrayShopInvs().toString());
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "["+plugin.getName()+"]" +"INICIALIZADO COM SUCESSO!");
 
     }
@@ -75,6 +75,7 @@ public class Main extends JavaPlugin {
         getCommand("addppoints").setExecutor(new PlayerCommands());
         getCommand("addprestige").setExecutor(new PlayerCommands());
         getCommand("setprestige").setExecutor(new PlayerCommands());
+        getCommand("teste").setExecutor(new PlayerCommands());
     }
 
     public static DBConnection getDbConnection() {

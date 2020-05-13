@@ -1,6 +1,9 @@
 package com.arthuramorim.commands;
 
 import com.arthuramorim.Main;
+import com.arthuramorim.database.LoadInvAndItems;
+import com.arthuramorim.entity.InvShop;
+import com.arthuramorim.entity.ItemShop;
 import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.menus.Menus;
 import com.arthuramorim.utils.StringColor;
@@ -25,6 +28,15 @@ public class PlayerCommands implements CommandExecutor {
         if (!(p instanceof Player)) return false;
 
         if (args.length == 0) {
+
+            if(command.getName().equalsIgnoreCase("teste")){
+                for(InvShop inv : LoadInvAndItems.getArrayShopInvs()){
+                    p.sendMessage(inv.getName() + "//// " + inv.toString());
+                    for(ItemShop item : inv.getItemsVenda()){
+                        p.sendMessage(item.toString());
+                    }
+                }
+            }
 
             if(command.getName().equalsIgnoreCase("prestigio")){
 

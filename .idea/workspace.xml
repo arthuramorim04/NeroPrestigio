@@ -7,7 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00ffa6b8-0f87-4a2b-bd39-627e044c5920" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/database/LoadInvAndItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/database/LoadInvAndItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/InvShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/InvShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/ItemShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/ItemShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/StaticMenus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/StaticMenus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/shop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/shop.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/commands/PlayerCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/commands/PlayerCommands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/database/LoadInvAndItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/database/LoadInvAndItems.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/InvShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/InvShop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/ItemShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/ItemShop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/InventoryEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/InventoryEvents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/menus/StaticMenus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/menus/StaticMenus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +65,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NametagEdit" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="C:/workspace/faculdade/prog1/SistemaDeFretamento" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
@@ -91,7 +108,9 @@
       <workItem from="1589170163608" duration="1789000" />
       <workItem from="1589171968909" duration="3407000" />
       <workItem from="1589208399533" duration="22131000" />
-      <workItem from="1589244418570" duration="12731000" />
+      <workItem from="1589244418570" duration="25075000" />
+      <workItem from="1589312363458" duration="1305000" />
+      <workItem from="1589381197042" duration="1635000" />
     </task>
     <servers />
   </component>
@@ -111,50 +130,65 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="732" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1588788766968" />
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1589246092146">
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1589304354434">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1588790439595" />
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589246092146" />
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589304354434" />
     <state x="640" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588808111402">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="640" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1588808111402" />
-    <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1589144960466">
+    <state x="690" y="272" width="1135" height="506" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1589311233048">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589144960466" />
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom" timestamp="1589242762685">
+    <state x="690" y="272" width="1135" height="506" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589311233048" />
+    <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1589314034106">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589242762685" />
-    <state width="1877" height="293" key="GridCell.Tab.0.center" timestamp="1589242762685">
+    <state x="740" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589314034106" />
+    <state width="1877" height="341" key="GridCell.Tab.0.bottom" timestamp="1589382309814">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589242762685" />
-    <state width="1877" height="293" key="GridCell.Tab.0.left" timestamp="1589242762685">
+    <state width="1877" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589382309814" />
+    <state width="1877" height="341" key="GridCell.Tab.0.center" timestamp="1589382309814">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589242762685" />
-    <state width="1877" height="293" key="GridCell.Tab.0.right" timestamp="1589242762685">
+    <state width="1877" height="341" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589382309814" />
+    <state width="1877" height="341" key="GridCell.Tab.0.left" timestamp="1589382309814">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589242762685" />
-    <state x="440" y="99" key="SettingsEditor" timestamp="1589169559560">
+    <state width="1877" height="341" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589382309814" />
+    <state width="1877" height="341" key="GridCell.Tab.0.right" timestamp="1589382309814">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="440" y="99" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589169559560" />
+    <state width="1877" height="341" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589382309814" />
+    <state x="440" y="99" key="SettingsEditor" timestamp="1589311586173">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="440" y="99" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589311586173" />
     <state x="606" y="140" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589230676033">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="606" y="140" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589230676033" />
-    <state x="427" y="261" width="969" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1589240746541">
+    <state x="767" y="180" width="969" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1589301702900">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="427" y="261" width="969" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589240746541" />
+    <state x="767" y="180" width="969" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589301702900" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588785603364">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1588785603364" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

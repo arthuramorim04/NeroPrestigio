@@ -20,18 +20,6 @@ shop:
           - 'FIRE_ASPECT,400'
           - 'DURABILITY,100'
         lore: []
-      4:
-        name: "&eEspada"
-        id: 271
-        data: 0
-        glow: true
-        slot: 2
-        prive: 1000
-        amount: 3
-        enchants:
-          - 'FIRE_ASPECT,400'
-          - 'DURABILITY,100'
-        lore: []
 
       5:
         name: "&eEspada"

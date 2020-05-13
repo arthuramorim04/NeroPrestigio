@@ -5,10 +5,12 @@ import org.bukkit.inventory.ItemStack;
 public class ItemShop {
 
     private static ItemStack items;
+    private static String name;
     private static Integer slot;
     private static Integer price;
 
-    public ItemShop(ItemStack items, Integer slot, Integer price) {
+    public ItemShop(String name,ItemStack items, Integer slot, Integer price) {
+        this.name = name;
         this.items = items;
         this.slot = slot;
         this.price = price;
@@ -16,26 +18,22 @@ public class ItemShop {
 
 
     public ItemStack getItems() {
-        return items;
+        return this.items;
     }
 
-    public void setItems(ItemStack items) {
-        this.items = items;
-    }
 
     public Integer getSlot() {
-        return slot;
+        return this.slot;
     }
 
-    public void setSlot(Integer slot) {
-        this.slot = slot;
+
+    public Integer getPrice() {
+        return this.price;
     }
 
-    public static Integer getPrice() {
-        return price;
-    }
 
-    public static void setPrice(Integer price) {
-        ItemShop.price = price;
+    @Override
+    public String toString() {
+        return "ItemShop{ "+ items.getItemMeta().toString() +" , slot: "+this.getSlot()+"}";
     }
 }
