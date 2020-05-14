@@ -62,6 +62,11 @@ public class PlayerController {
                 Main.getArrayPlayer().add(p);
 
             }
+            int i = 0;
+            if (!result.next()) {
+                registerNewPlayer(name, uuid);
+                i++;
+            }
 
             ps.close();
         } catch (Exception e) {
@@ -98,7 +103,6 @@ public class PlayerController {
 
 
     public static void savePlayerOnLeft(UUID uuid) {
-
 
 
         for (PrestigePlayer player : Main.getArrayPlayer()) {

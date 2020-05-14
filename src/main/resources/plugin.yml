@@ -5,17 +5,17 @@ author: KingN3R0
 
 commands:
   ppoints:
-    description:
+    description: "Ver seus pontos de prestigio"
   prestigios:
-    description:
+    description: "Ver sua quantidade de prestigios"
   prestigio:
-    description:
+    description: "Abre o menu de prestigio do servidor"
   addppoints:
-    description:
+    description: "/addppoints <quantidade> <jogador>"
   setppoints:
-    description:
+    description: "/setppoints <quantidade> <jogador>"
   addprestige:
-    description:
+    description: "/addprestige <quantidade> <jogador>"
   setprestige:
-    description:
+    description: " /setprestige <quantidade> <jogador>"
   teste:

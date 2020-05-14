@@ -23,17 +23,19 @@ public class PlayerCommands implements CommandExecutor {
         Player p = (Player) sender;
 
 
-//"
+//
 
         if (!(p instanceof Player)) return false;
 
         if (args.length == 0) {
 
             if (command.getName().equalsIgnoreCase("teste")) {
-                for (InvShop inv : LoadInvAndItems.getArrayShopInvs()) {
-                    p.sendMessage(inv.getName() + "//// " + inv.toString());
-                    for (ItemShop item : inv.getItemsVenda()) {
-                        p.sendMessage(item.toString());
+                if(p.hasPermission("nero.teste")){
+                    for (InvShop inv : LoadInvAndItems.getArrayShopInvs()) {
+                        p.sendMessage(inv.getName() + "//// " + inv.toString());
+                        for (ItemShop item : inv.getItemsVenda()) {
+                            p.sendMessage(item.toString());
+                        }
                     }
                 }
             }
