@@ -7,22 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00ffa6b8-0f87-4a2b-bd39-627e044c5920" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/PrestigePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/PrestigePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/PlayerEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/PlayerEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/Menus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/Menus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/shop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/shop.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/commands/PlayerCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/commands/PlayerCommands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/PrestigePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/PrestigePlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/InventoryEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/InventoryEvents.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/menus/Menus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/menus/Menus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/shop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/shop.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +96,7 @@
       <workItem from="1589381197042" duration="4755000" />
       <workItem from="1589400322312" duration="5000" />
       <workItem from="1589407951958" duration="2242000" />
-      <workItem from="1589420601076" duration="316000" />
+      <workItem from="1589420601076" duration="456000" />
     </task>
     <servers />
   </component>
