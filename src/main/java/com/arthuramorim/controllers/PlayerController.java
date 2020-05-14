@@ -110,4 +110,15 @@ public class PlayerController {
             }
         }
     }
+
+    public static void savePlayerTask(PrestigePlayer p){
+        for(PrestigePlayer player : Main.getArrayPlayer()){
+            if(player.getUuid().equals(p.getUuid())){
+                savePlayer(p);
+                Main.getArrayPlayer().remove(player);
+                Main.getArrayPlayer().add(p);
+
+            }
+        }
+    }
 }

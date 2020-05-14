@@ -6,6 +6,7 @@ import com.arthuramorim.database.LoadInvAndItems;
 import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.events.InventoryEvents;
 import com.arthuramorim.events.PlayerEvents;
+import com.arthuramorim.taks.SavePlayerStats;
 import com.arthuramorim.utils.Configs;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -18,10 +19,22 @@ public class Main extends JavaPlugin {
     public static Main plugin;
     private static DBConnection dbConnection;
     private static ArrayList<PrestigePlayer> arrayPlayer = new ArrayList<>();
+    private static ArrayList<PrestigePlayer> altPlayer = new ArrayList<>();
 
     @Override
     public void onEnable() {
         plugin = this;
+
+        getServer().getConsoleSender().sendMessage(ChatColor.BLUE + "\n" +
+                " ____  __.__                _______  _________________________   \n" +
+                "|    |/ _|__| ____    ____  \\      \\ \\_____  \\______   \\   _  \\  \n" +
+                "|      < |  |/    \\  / ___\\ /   |   \\  _(__  <|       _/  /_\\  \\ \n" +
+                "|    |  \\|  |   |  \\/ /_/  >    |    \\/       \\    |   \\  \\_/   \\\n" +
+                "|____|__ \\__|___|  /\\___  /\\____|__  /______  /____|_  /\\_____  /\n" +
+                "        \\/       \\//_____/         \\/       \\/       \\/       \\/ \n\n\n" +
+                ChatColor.GREEN + "         NeroPrestigio\n" +
+                "         Autor: Arthur 'KingN3R0' Amorim\n" +
+                "         versao: 1.0\n\n\n\n");
 
         getServer().getConsoleSender().sendMessage(ChatColor.YELLOW + "["+plugin.getName()+"]" +"INICIALIZANDO...");
 
@@ -41,7 +54,7 @@ public class Main extends JavaPlugin {
 
         LoadInvAndItems.loadInvShop();
 
-//        Menus.createInvetorys(LoadInvAndItems.getShopHash());
+        SavePlayerStats.savePlayer();
 
         System.out.println(LoadInvAndItems.getArrayShopInvs().toString());
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "["+plugin.getName()+"]" +"INICIALIZADO COM SUCESSO!");
@@ -83,4 +96,7 @@ public class Main extends JavaPlugin {
         return arrayPlayer;
     }
 
+    public static ArrayList<PrestigePlayer> getAltPlayer() {
+        return altPlayer;
+    }
 }

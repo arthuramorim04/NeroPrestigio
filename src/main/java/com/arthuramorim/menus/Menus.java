@@ -2,9 +2,6 @@ package com.arthuramorim.menus;
 
 import com.arthuramorim.Main;
 import com.arthuramorim.controllers.PlayerController;
-import com.arthuramorim.database.LoadInvAndItems;
-import com.arthuramorim.entity.InvShop;
-import com.arthuramorim.entity.ItemShop;
 import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.utils.Configs;
 import com.arthuramorim.utils.MakeItem;
@@ -13,25 +10,25 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class Menus {
 
     public static MakeItem backgroudPanel = new MakeItem(Material.STAINED_GLASS_PANE, (byte) 15);
-    public static MakeItem profilePlayer = new MakeItem(347);
     public static MakeItem prestige = new MakeItem(Material.EYE_OF_ENDER);
     public static MakeItem prestigeShop = new MakeItem(Material.GOLD_NUGGET);
     public static MakeItem seaLantern = new MakeItem(Material.SEA_LANTERN);
     public static MakeItem web = new MakeItem(Material.WEB);
     public static MakeItem arrow = new MakeItem(Material.ARROW);
-    public static Inventory prestigeMainMenu = Bukkit.createInventory(null, 9 * 6, StringColor.color("&dPrestigio"));
+    public static Inventory prestigeMainMenu = null;
 
 
     public static void mainMenuPrestige(Player p) {
+
+        prestigeMainMenu = Bukkit.createInventory(null, 9 * 6, StringColor.color("&dPrestigio"));
+        MakeItem profilePlayer = new MakeItem(347);
 
         ArrayList<String> infoPlayer = new ArrayList<>();
         int controller = 0;
