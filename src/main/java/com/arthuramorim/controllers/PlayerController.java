@@ -60,10 +60,8 @@ public class PlayerController {
                 Main.getArrayPlayer().add(p);
 
             }
-            int i = 0;
             if (!result.next()) {
                 registerNewPlayer(name, uuid);
-                i++;
             }
 
             ps.close();
@@ -71,7 +69,7 @@ public class PlayerController {
 
             Main.plugin.getServer().getConsoleSender().sendMessage(StringColor.color("&c[LoadPlayer] Nao foi possivel carregar o player \n" +
                     "Nome: " + p.getName() + "\n " +
-                    "UUID: " + p.getUuid() + "\n O nome do jogador pode ter sofrido alguma alteracao e nao esta compativel com o uuid cadastrado no banco de dados.\n Mais informacoes do erro: " + e.getMessage()));
+                    "UUID: " + p.getUuid() + "\nErro inesperado: " + e.getMessage()));
 
         }
 
@@ -94,7 +92,7 @@ public class PlayerController {
 
             Main.plugin.getServer().getConsoleSender().sendMessage(StringColor.color("&c[] Nao foi possivel salvar o player \n" +
                     "Nome: " + p.getName() + "\n" +
-                    "UUID: " + p.getUuid() + "\n O nome do jogador pode ter sofrido alguma alteracao e nao esta compativel com o uuid cadastrado no banco de dados.\n Mais informacoes do erro: " + e.getMessage()));
+                    "UUID: " + p.getUuid() + "\nErro inesperado: " + e.getMessage()));
 
         }
     }

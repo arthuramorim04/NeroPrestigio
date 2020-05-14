@@ -17,7 +17,6 @@ public class Main extends JavaPlugin {
 
     public static Main plugin;
     private static DBConnection dbConnection;
-    public static String commandResetGroup;
     private static ArrayList<PrestigePlayer> arrayPlayer = new ArrayList<>();
 
     @Override
@@ -29,8 +28,6 @@ public class Main extends JavaPlugin {
         Configs.createConfig();
         Configs.createShop();
 
-        commandResetGroup = Configs.getConfigFile().getString("resetCommand");
-        System.out.println(commandResetGroup);
         String user = Configs.getConfigFile().getString("storage.user");
         String pass = Configs.getConfigFile().getString("storage.pass");
         String host = Configs.getConfigFile().getString("storage.host");

@@ -43,6 +43,9 @@ public class PrestigePlayer {
     public void addPoints(Integer points) {
         this.points = this.points + points;
     }
+    public void addPoints() {
+        this.points = this.points + 500;
+    }
 
     public void removePoints(Integer points) {
         this.points = this.points - points;
@@ -59,6 +62,7 @@ public class PrestigePlayer {
     public boolean addPrestige() {
         try{
             this.prestige = this.prestige+1;
+            addPoints();
             return true;
         }catch (Exception e){
             System.out.println(e.getMessage());

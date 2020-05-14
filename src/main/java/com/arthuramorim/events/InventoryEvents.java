@@ -1,13 +1,15 @@
 package com.arthuramorim.events;
 
 import com.arthuramorim.Main;
-import com.arthuramorim.controllers.PlayerController;
 import com.arthuramorim.database.LoadInvAndItems;
 import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.menus.Menus;
 import com.arthuramorim.menus.StaticMenus;
+import com.arthuramorim.utils.Configs;
 import com.arthuramorim.utils.MakeItem;
 import com.arthuramorim.utils.StringColor;
+import org.bukkit.Bukkit;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -27,15 +29,15 @@ public class InventoryEvents implements Listener {
             if (e.getCurrentItem() == null) return;
             e.setCancelled(true);
             if(e.getClick().isLeftClick()){
-                if(e.getCurrentItem().isSimilar(Menus.prestige.build())){
+                if(MakeItem.checkIsSimilar(e.getCurrentItem(),Menus.prestige.build())){
                     if(p.hasPermission("nero.prestigio")){
                         for(PrestigePlayer player : Main.getArrayPlayer()){
                             if(player.getUuid().equals(p.getUniqueId())){
                                 if(player.addPrestige()){
-                                    p.sendMessage(StringColor.color("&aVoce acabou de fazer prestigio! Parabens!"));
-                                    p.sendMessage(StringColor.color("&aVoce recebeu +1 de prestigio totalizando."));
-                                    p.sendMessage(StringColor.color("&aVoce recebeu +190909 pontos de prestigio."));
-                                    //criar metodo para executar comando e resetar o rank do player(comando da config)
+                                    commandResetRankPlayer(p);
+                                    p.closeInventory();
+                                    p.playSound(p.getLocation(),Sound.ENDERDRAGON_DEATH,1f,1f);
+                                    p.sendMessage(StringColor.color("\n&aVoce acabou de fazer prestigio! Parabens!\n"));
                                 }else{
                                     p.sendMessage(StringColor.color("&cOcorreu algum erro e nao foi possivel realizar o prestigio, entre em contato com um staff"));
                                 }
@@ -87,6 +89,15 @@ public class InventoryEvents implements Listener {
             e.setCancelled(true);
             return;
         }
+    }
+
+
+    protected static void commandResetRankPlayer(Player p){
+
+        String commandResetGroup = Configs.getConfigFile().getString("resetCommand").replace("%player%",p.getName());
+        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), commandResetGroup);
+        p.sendMessage(StringColor.color("&aVoce foi enviado para o primeiro rank novamente. Boa Sorte!"));
+
     }
 
 }
