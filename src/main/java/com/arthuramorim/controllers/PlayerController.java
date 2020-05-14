@@ -46,11 +46,9 @@ public class PlayerController {
 
             PreparedStatement ps;
             ResultSet result;
-            System.out.println(1);
             ps = con.prepareStatement("select * from neroprestige" +
                     " where  uuid = '" + p.getUuid() + "'");
 
-            System.out.println(2);
             result = ps.executeQuery();
 
             while (result.next()) {
