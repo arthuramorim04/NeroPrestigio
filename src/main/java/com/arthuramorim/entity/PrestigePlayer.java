@@ -61,9 +61,11 @@ public class PrestigePlayer {
 
     public boolean addPrestige() {
         try{
+
             this.prestige = this.prestige+1;
             addPoints();
             return true;
+
         }catch (Exception e){
             System.out.println(e.getMessage());
             return false;
