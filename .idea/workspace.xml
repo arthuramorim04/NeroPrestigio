@@ -8,7 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="00ffa6b8-0f87-4a2b-bd39-627e044c5920" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,7 @@
       <workItem from="1589381197042" duration="4755000" />
       <workItem from="1589400322312" duration="5000" />
       <workItem from="1589407951958" duration="2242000" />
-      <workItem from="1589420601076" duration="5497000" />
+      <workItem from="1589420601076" duration="5595000" />
     </task>
     <servers />
   </component>

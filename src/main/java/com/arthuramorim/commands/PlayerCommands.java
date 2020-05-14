@@ -23,7 +23,6 @@ public class PlayerCommands implements CommandExecutor {
         Player p = (Player) sender;
 
 
-//
 
         if (!(p instanceof Player)) return false;
 
