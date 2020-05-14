@@ -34,10 +34,12 @@ public class InventoryEvents implements Listener {
                         for(PrestigePlayer player : Main.getArrayPlayer()){
                             if(player.getUuid().equals(p.getUniqueId())){
                                 if(player.addPrestige()){
+
                                     commandResetRankPlayer(p);
                                     p.closeInventory();
                                     p.playSound(p.getLocation(),Sound.ENDERDRAGON_DEATH,1f,1f);
                                     p.sendMessage(StringColor.color("\n&aVoce acabou de fazer prestigio! Parabens!\n"));
+
                                 }else{
                                     p.sendMessage(StringColor.color("&cOcorreu algum erro e nao foi possivel realizar o prestigio, entre em contato com um staff"));
                                 }
