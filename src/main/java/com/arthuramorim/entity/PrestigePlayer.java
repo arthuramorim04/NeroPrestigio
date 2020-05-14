@@ -56,6 +56,17 @@ public class PrestigePlayer {
         this.prestige = this.prestige+prestige;
     }
 
+    public boolean addPrestige() {
+        try{
+            this.prestige = this.prestige+1;
+            return true;
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            return false;
+        }
+
+    }
+
     public void removePrestige(Integer prestige) {
         this.prestige = this.prestige-prestige;
     }

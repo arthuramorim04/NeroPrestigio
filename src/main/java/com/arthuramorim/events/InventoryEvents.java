@@ -1,6 +1,9 @@
 package com.arthuramorim.events;
 
+import com.arthuramorim.Main;
+import com.arthuramorim.controllers.PlayerController;
 import com.arthuramorim.database.LoadInvAndItems;
+import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.menus.Menus;
 import com.arthuramorim.menus.StaticMenus;
 import com.arthuramorim.utils.MakeItem;
@@ -26,9 +29,19 @@ public class InventoryEvents implements Listener {
             if(e.getClick().isLeftClick()){
                 if(e.getCurrentItem().isSimilar(Menus.prestige.build())){
                     if(p.hasPermission("nero.prestigio")){
-                        p.sendMessage(StringColor.color("&aVoce acabou de fazer prestigio! Parabens!"));
-                        p.sendMessage(StringColor.color("&aVoce recebeu +1 de prestigio totalizando."));
-                        p.sendMessage(StringColor.color("&aVoce recebeu +190909 pontos de prestigio."));
+                        for(PrestigePlayer player : Main.getArrayPlayer()){
+                            if(player.getUuid().equals(p.getUniqueId())){
+                                if(player.addPrestige()){
+                                    p.sendMessage(StringColor.color("&aVoce acabou de fazer prestigio! Parabens!"));
+                                    p.sendMessage(StringColor.color("&aVoce recebeu +1 de prestigio totalizando."));
+                                    p.sendMessage(StringColor.color("&aVoce recebeu +190909 pontos de prestigio."));
+                                    //criar metodo para executar comando e resetar o rank do player(comando da config)
+                                }else{
+                                    p.sendMessage(StringColor.color("&cOcorreu algum erro e nao foi possivel realizar o prestigio, entre em contato com um staff"));
+                                }
+                            }
+                        }
+
                         e.setCancelled(true);
                     }else{
                         p.sendMessage(StringColor.color("&cVoce precisa estar no ultimo rank para fazer um prestigio."));

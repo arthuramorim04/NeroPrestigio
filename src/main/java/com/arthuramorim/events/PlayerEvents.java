@@ -19,6 +19,7 @@ public class PlayerEvents implements Listener {
         if(e.getPlayer().hasPlayedBefore()){
 
             PlayerController.loadPlayer(p.getName(),p.getUuid());
+            //adicionar metodo pra validar se o player ja existe no banco mesmo se ele ja tenha logado anteriormente
 
         }
 

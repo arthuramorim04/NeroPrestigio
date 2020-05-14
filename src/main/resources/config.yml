@@ -1,10 +1,9 @@
 storage:
-  user: 'arthur'
-  pass: '1234'
-  host: 'localhost'
-  db: 'neroplugins'
+  user: 'u1030_bw4bmA3Qjq'
+  pass: '+j8FAaC+9Q+=HixiA8Ek^lyl'
+  host: '192.99.100.105'
+  db: 's1030_dbdunkin'
   port: 3306
-  table: 'neroprestige'
 
 lores:
   prestigeButtomMenu:
@@ -15,8 +14,8 @@ lores:
     - '&e +1 prestigio e pontos de prestigio. Alem disso'
     - '&evoce sera enviado para o primeiro rank.'
   prestigeShopMenu:
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
+    - '&eClique aqui para acessar'
+    - '&ea area Prestigio Shop'
+
+## Utilize %player% para definir o nome do player no comando
+resetCommand: 'pex user %player% group set membro'
