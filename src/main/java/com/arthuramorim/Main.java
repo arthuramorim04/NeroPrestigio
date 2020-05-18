@@ -2,7 +2,7 @@ package com.arthuramorim;
 
 import com.arthuramorim.commands.PlayerCommands;
 import com.arthuramorim.database.DBConnection;
-import com.arthuramorim.database.LoadInvAndItems;
+import com.arthuramorim.enginers.LoadInvAndItems;
 import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.events.InventoryEvents;
 import com.arthuramorim.events.PlayerEvents;
@@ -19,7 +19,7 @@ public class Main extends JavaPlugin {
     public static Main plugin;
     private static DBConnection dbConnection;
     private static ArrayList<PrestigePlayer> arrayPlayer = new ArrayList<>();
-    private static ArrayList<PrestigePlayer> altPlayer = new ArrayList<>();
+    private static ArrayList    <PrestigePlayer> altPlayer = new ArrayList<>();
 
     @Override
     public void onEnable() {
@@ -85,7 +85,6 @@ public class Main extends JavaPlugin {
         getCommand("addppoints").setExecutor(new PlayerCommands());
         getCommand("addprestige").setExecutor(new PlayerCommands());
         getCommand("setprestige").setExecutor(new PlayerCommands());
-        getCommand("teste").setExecutor(new PlayerCommands());
     }
 
     public static DBConnection getDbConnection() {

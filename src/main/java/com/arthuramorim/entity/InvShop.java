@@ -3,6 +3,7 @@ package com.arthuramorim.entity;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class InvShop {
@@ -10,7 +11,7 @@ public class InvShop {
     private ItemStack iconeInv;
     private String name;
     private Integer slot;
-    private List<ItemShop> itemsVenda;
+    private HashMap<Integer,ItemShop> itemsVenda;
 
     public ItemStack getIconeInv() {
         return iconeInv;
@@ -20,11 +21,11 @@ public class InvShop {
         this.iconeInv = iconeInv;
     }
 
-    public List<ItemShop> getItemsVenda() {
+    public HashMap<Integer,ItemShop> getItemsVenda() {
         return itemsVenda;
     }
 
-    public void setItemsVenda(List<ItemShop> itemsVenda) {
+    public void setItemsVenda(HashMap<Integer,ItemShop> itemsVenda) {
         this.itemsVenda = itemsVenda;
     }
 

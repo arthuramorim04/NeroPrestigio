@@ -1,6 +1,6 @@
 name: NeroPrestigio
 main: com.arthuramorim.Main
-version: 1.7
+version: 2.0
 author: KingN3R0
 
 commands:
@@ -18,4 +18,3 @@ commands:
     description: "/addprestige <quantidade> <jogador>"
   setprestige:
     description: " /setprestige <quantidade> <jogador>"
-  teste:

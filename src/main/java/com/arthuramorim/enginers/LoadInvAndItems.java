@@ -1,4 +1,4 @@
-package com.arthuramorim.database;
+package com.arthuramorim.enginers;
 
 import com.arthuramorim.entity.InvShop;
 import com.arthuramorim.entity.ItemShop;
@@ -9,6 +9,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.enchantments.Enchantment;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class LoadInvAndItems {
@@ -46,7 +47,7 @@ public class LoadInvAndItems {
 
                     invShop.setName(StringColor.color(invName));
 
-                    List<ItemShop> items = carregaItems(invName);
+                    HashMap<Integer,ItemShop> items = carregaItems(invName);
 
                     invShop.setItemsVenda(items);
 
@@ -57,15 +58,15 @@ public class LoadInvAndItems {
     }
 
 
-    private static List<ItemShop> carregaItems(String invName) {
+    private static HashMap<Integer,ItemShop> carregaItems(String invName) {
 
         if (!customConfig.isSet("shop." + invName + ".items")) {
-            List<ItemShop> items = new ArrayList<>();
-            System.out.println(items.toString());
+            HashMap<Integer,ItemShop> items = new HashMap<>();
             return items;
         } else {
 
-            List<ItemShop> arrayItems = new ArrayList<>();
+            HashMap<Integer,ItemShop> hashItemsInv = new HashMap<>();
+
 
             customConfig.getConfigurationSection("shop." + invName + ".items").getKeys(false)
                     .forEach(items -> {
@@ -79,12 +80,14 @@ public class LoadInvAndItems {
                             int price = customConfig.getInt(path + ".price");
                             Integer amount = customConfig.getInt(path + ".amount");
                             List<String> lore = (customConfig.getStringList(path + ".lore") != null ? customConfig.getStringList(path + ".lore") : new ArrayList<>());
+                            List<String> cmds = (customConfig.getStringList(path+".cmd")) != null ? customConfig.getStringList(path + ".cmd") : new ArrayList<>();
+                            Boolean onlyCmd = customConfig.getBoolean(path + ".onlyCmd");
                             MakeItem item = new MakeItem(id, (byte) dataItem);
 
 
                             item.setName(nome).setLore((ArrayList<String>) lore).setAmount(amount);
 
-                            customConfig.getStringList(path + ".enchants").forEach(enchant -> {
+                            customConfig.getStringList(path + ".enchantment").forEach(enchant -> {
                                 try {
                                     String[] aux = null;
                                     String encanto = null;
@@ -101,9 +104,9 @@ public class LoadInvAndItems {
 
                             if (item != null) {
 
-                                ItemShop itemShop = new ItemShop(nome, item.build(), slot, price);
+                                ItemShop itemShop = new ItemShop(nome, item.build(), slot, price, cmds, onlyCmd);
 
-                                arrayItems.add(itemShop);
+                                hashItemsInv.put(slot,itemShop);
                             } else {
                                 return;
                             }
@@ -114,7 +117,7 @@ public class LoadInvAndItems {
                         }
                     });
 
-            return arrayItems;
+            return hashItemsInv;
         }
     }
 

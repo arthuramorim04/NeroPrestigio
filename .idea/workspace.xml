@@ -5,20 +5,54 @@
       <artifact name="NeroPrestigio" />
     </artifacts-to-build>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="00ffa6b8-0f87-4a2b-bd39-627e044c5920" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/taks/SavePlayerStats.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/NeroPrestigio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/NeroPrestigio.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/controllers/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/controllers/PlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/Menus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/Menus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/database/LoadInvAndItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/enginers/LoadInvAndItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/InvShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/InvShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/ItemShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/ItemShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/PrestigePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/PrestigePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/StaticMenus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/StaticMenus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/shop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/shop.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/NeroPrestigio.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/commands/PlayerCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/commands/PlayerCommands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/controllers/PlayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/controllers/PlayerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/database/LoadInvAndItems.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/InvShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/InvShop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/ItemShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/ItemShop.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/PrestigePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/PrestigePlayer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/InventoryEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/InventoryEvents.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/menus/Menus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/menus/Menus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/menus/StaticMenus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/menus/StaticMenus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/shop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/shop.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +73,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -53,14 +80,16 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/workspace/faculdade/prog1/SistemaDeFretamento" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../servidores/1.8/plugins" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
@@ -108,13 +137,38 @@
       <workItem from="1589400322312" duration="5000" />
       <workItem from="1589407951958" duration="2242000" />
       <workItem from="1589420601076" duration="9167000" />
+      <workItem from="1589491110277" duration="796000" />
+      <workItem from="1589547316061" duration="1024000" />
+      <workItem from="1589548715372" duration="8582000" />
+      <workItem from="1589647090148" duration="1467000" />
+      <workItem from="1589657671943" duration="61000" />
+      <workItem from="1589671208864" duration="4255000" />
+      <workItem from="1589675823310" duration="1090000" />
+      <workItem from="1589721711916" duration="11483000" />
+      <workItem from="1589810418309" duration="7577000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="568" y="234" key="#Notifications" timestamp="1589736572960">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="568" y="234" key="#Notifications/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589736572960" />
     <state x="552" y="183" key="#Project_Structure" timestamp="1588780962405">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -127,9 +181,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="732" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1588788766968" />
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1589469578554">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="544" y="106" key="#com.intellij.ide.util.MemberChooser" timestamp="1589733579894">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="544" y="106" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589733579894" />
+    <state x="544" y="106" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1589553501833" />
     <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1588790439595" />
     <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589469578554" />
     <state x="640" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588808111402">
@@ -140,38 +196,75 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="272" width="1135" height="506" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589311233048" />
-    <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1589314034106">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="526" y="187" key="FileChooserDialogImpl" timestamp="1589743786428">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="526" y="187" key="FileChooserDialogImpl/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589743786428" />
+    <state x="526" y="187" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1589551965300" />
     <state x="740" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589314034106" />
-    <state width="1877" height="341" key="GridCell.Tab.0.bottom" timestamp="1589465958784">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1323" height="325" key="GridCell.Tab.0.bottom" timestamp="1589822249273">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="661" height="227" key="GridCell.Tab.0.bottom/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589745911548" />
+    <state width="1323" height="325" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589822249273" />
     <state width="1877" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589465958784" />
-    <state width="1877" height="341" key="GridCell.Tab.0.center" timestamp="1589465958784">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1323" height="325" key="GridCell.Tab.0.center" timestamp="1589822249273">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="661" height="227" key="GridCell.Tab.0.center/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589745911548" />
+    <state width="1323" height="325" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589822249273" />
     <state width="1877" height="341" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589465958784" />
-    <state width="1877" height="341" key="GridCell.Tab.0.left" timestamp="1589465958784">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1323" height="325" key="GridCell.Tab.0.left" timestamp="1589822249272">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="661" height="227" key="GridCell.Tab.0.left/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589745911548" />
+    <state width="1323" height="325" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589822249272" />
     <state width="1877" height="341" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589465958784" />
-    <state width="1877" height="341" key="GridCell.Tab.0.right" timestamp="1589465958784">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1323" height="325" key="GridCell.Tab.0.right" timestamp="1589822249273">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="661" height="227" key="GridCell.Tab.0.right/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589745911548" />
+    <state width="1323" height="325" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589822249273" />
     <state width="1877" height="341" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589465958784" />
-    <state x="440" y="99" key="SettingsEditor" timestamp="1589311586173">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1323" height="325" key="GridCell.Tab.1.bottom" timestamp="1589822249275">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="661" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589745911550" />
+    <state width="1323" height="325" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589822249275" />
+    <state width="1323" height="325" key="GridCell.Tab.1.center" timestamp="1589822249274">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="661" height="227" key="GridCell.Tab.1.center/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589745911550" />
+    <state width="1323" height="325" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1589822249274" />
+    <state width="1323" height="325" key="GridCell.Tab.1.left" timestamp="1589822249274">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="661" height="227" key="GridCell.Tab.1.left/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589745911550" />
+    <state width="1323" height="325" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1589822249274" />
+    <state width="1323" height="325" key="GridCell.Tab.1.right" timestamp="1589822249274">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="661" height="227" key="GridCell.Tab.1.right/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589745911550" />
+    <state width="1323" height="325" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1589822249274" />
+    <state x="313" y="0" key="SettingsEditor" timestamp="1589653328515">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="313" y="0" key="SettingsEditor/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589653328515" />
+    <state x="313" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1589551968930" />
     <state x="440" y="99" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589311586173" />
     <state x="606" y="140" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589230676033">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="606" y="140" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589230676033" />
-    <state x="767" y="180" width="969" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1589301702900">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="546" y="127" width="690" height="466" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1589735775864">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="546" y="127" width="690" height="466" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589735775864" />
     <state x="767" y="180" width="969" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589301702900" />
+    <state x="339" y="165" key="run.anything.popup" timestamp="1589734220238">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589734220238" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588785603364">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -181,19 +274,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/arthuramorim/controllers/PlayerController.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java</url>
           <line>99</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/arthuramorim/events/InventoryEvents.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="16" />
+          <option name="timeStamp" value="71" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

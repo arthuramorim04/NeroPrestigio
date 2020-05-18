@@ -1,5 +1,9 @@
 package com.arthuramorim.entity;
 
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+
+import java.util.List;
 import java.util.UUID;
 
 public class PrestigePlayer {
@@ -27,7 +31,9 @@ public class PrestigePlayer {
     public Integer getPrestige() {
         return prestige;
     }
-;
+
+    ;
+
     public Integer getPoints() {
         return points;
     }
@@ -43,12 +49,19 @@ public class PrestigePlayer {
     public void addPoints(Integer points) {
         this.points = this.points + points;
     }
+
     public void addPoints() {
         this.points = this.points + 500;
     }
 
-    public void removePoints(Integer points) {
-        this.points = this.points - points;
+    public Boolean removePoints(Integer points) {
+        try{
+            this.points = this.points - points;
+            return true;
+        }catch (Exception e){
+            e.getStackTrace();
+        }
+        return false;
     }
 
     public void resetPoints() {
@@ -56,17 +69,17 @@ public class PrestigePlayer {
     }
 
     public void addPrestige(Integer prestige) {
-        this.prestige = this.prestige+prestige;
+        this.prestige = this.prestige + prestige;
     }
 
     public boolean addPrestige() {
-        try{
+        try {
 
-            this.prestige = this.prestige+1;
+            this.prestige = this.prestige + 1;
             addPoints();
             return true;
 
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             return false;
         }
@@ -74,8 +87,9 @@ public class PrestigePlayer {
     }
 
     public void removePrestige(Integer prestige) {
-        this.prestige = this.prestige-prestige;
+        this.prestige = this.prestige - prestige;
     }
+
 
     public void resetPrestige(Integer prestige) {
         this.prestige = 0;

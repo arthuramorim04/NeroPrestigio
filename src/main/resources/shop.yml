@@ -7,6 +7,23 @@ shop:
     glow: true
     lore:
       - '&fCompre itens &fBASICOS'
+    items:
+      item1:
+        name: "&bEspada Prestigio1"
+        id: 276
+        data: 0
+        amount: 1
+        price: 1000
+        slot: 32
+        enchantment:
+          - 'DURABILITY,5'
+        lore:
+          - '&fEspada Prestigio'
+          - '&ftipo: &7COMUM'
+        glow: false
+        cmd:
+          - 'tm broadcast oi'
+        onlyCmd: true
   avancada:
     name: "&eItens Raros"
     id: 385
