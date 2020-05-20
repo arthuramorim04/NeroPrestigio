@@ -19,3 +19,4 @@ lores:
 
 ## Utilize %player% para definir o nome do player no comando
 resetCommand: 'pex user %player% group set membro'
+resetPoints: 1000
