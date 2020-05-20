@@ -95,7 +95,6 @@ public class StaticMenus {
                         }
 
                         category.setItem(itemShop.getSlot(), itemClone);
-                        System.out.println(itemShop.getItems().getItemMeta().getDisplayName() + "   slot: " + itemShop.getSlot() + "lore" + itemClone.getItemMeta().getLore());
 
                     } else {
                         System.out.println("nao foi possivel setar a item: " + itemShop.getItems().getItemMeta().getDisplayName());
