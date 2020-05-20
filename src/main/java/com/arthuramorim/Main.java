@@ -35,7 +35,9 @@ public class Main extends JavaPlugin {
                 "        \\/       \\//_____/         \\/       \\/       \\/       \\/ \n\n\n" +
                 ChatColor.GREEN + "         NeroPrestigio\n" +
                 "         Autor: Arthur 'KingN3R0' Amorim\n" +
-                "         versao: 1.0\n\n\n\n");
+                "         Versao: 3.1\n" +
+                "         Discord: N3R0#9378\n\n\n" +
+                "");
 
         getServer().getConsoleSender().sendMessage(ChatColor.YELLOW + "["+plugin.getName()+"]" +"INICIALIZANDO...");
 
