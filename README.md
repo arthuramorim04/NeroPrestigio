@@ -67,4 +67,7 @@ O sistema consiste em criar uma nova mecânica de jogo para o servidor de Rankup
 ### Menu Categorias:
 ![enter image description here](https://i.imgur.com/SvorHsq.png)
 ### Categorias:
-![enter image description here](https://i.imgur.com/GTmm9y1.png)
+![enter image description here](https://i.imgur.com/GTmm9y1.png)### Configuração Shop
+![enter image description here](https://i.imgur.com/21vBygf.png)
+### Configuração Geral
+![enter image description here](https://i.imgur.com/yJeIQn9.png)
