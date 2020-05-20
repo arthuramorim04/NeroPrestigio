@@ -6,21 +6,22 @@ import com.arthuramorim.enginers.LoadInvAndItems;
 import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.events.InventoryEvents;
 import com.arthuramorim.events.PlayerEvents;
-import com.arthuramorim.taks.SavePlayerStats;
+import com.arthuramorim.taks.SavePlayer;
 import com.arthuramorim.utils.Configs;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Main extends JavaPlugin {
 
     public static Main plugin;
     private static DBConnection dbConnection;
-    private static ArrayList<PrestigePlayer> arrayPlayer = new ArrayList<>();
-    private static ArrayList    <PrestigePlayer> altPlayer = new ArrayList<>();
-
+    private static HashMap<String,PrestigePlayer> hashPlayer = new HashMap<>();
+    private static ArrayList <PrestigePlayer> altPlayer = new ArrayList<>();
+    private SavePlayer sp;
     @Override
     public void onEnable() {
         plugin = this;
@@ -53,10 +54,10 @@ public class Main extends JavaPlugin {
         loadCommands();
 
         LoadInvAndItems.loadInvShop();
+        //task
+        sp = new SavePlayer();
+        sp.runTaskTimerAsynchronously(this,0L,20*600L);
 
-        SavePlayerStats.savePlayer();
-
-        System.out.println(LoadInvAndItems.getArrayShopInvs().toString());
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "["+plugin.getName()+"]" +"INICIALIZADO COM SUCESSO!");
 
     }
@@ -65,7 +66,7 @@ public class Main extends JavaPlugin {
     public void onDisable() {
 
         getServer().getConsoleSender().sendMessage(ChatColor.YELLOW + "["+plugin.getName()+"]" +"DESABILITANDO...");
-
+        sp.saveAll();
         getDbConnection().closeConnection();
         getServer().getConsoleSender().sendMessage(ChatColor.RED + "["+plugin.getName()+"]" +"DESABILITADO COM SUCESSO!");
 
@@ -91,8 +92,8 @@ public class Main extends JavaPlugin {
         return dbConnection;
     }
 
-    public static ArrayList<PrestigePlayer> getArrayPlayer() {
-        return arrayPlayer;
+    public static HashMap<String, PrestigePlayer> getHashPlayer() {
+        return hashPlayer;
     }
 
     public static ArrayList<PrestigePlayer> getAltPlayer() {
