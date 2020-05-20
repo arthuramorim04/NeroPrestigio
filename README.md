@@ -41,17 +41,19 @@ O sistema consiste em criar uma nova mecânica de jogo para o servidor de Rankup
 ### Comandos:
 
 #### Jogadores:
-**ppoints:** *Visualiza a quantidade de pontos que você possui.*
-**prestigios:** *Visualiza a quantidade de prestígios que você possui.*
-**prestigio:** *Abre o menu de prestigio. (Local aonde é possível realizar prestigio e acessar o Shop)*
+
+ - **ppoints:** *Visualiza a quantidade de pontos que você possui.*
+ - **prestigios:** *Visualiza a quantidade de prestígios que você possui.*
+ - **prestigio:** *Abre o menu de prestigio. (Local aonde é possível realizar prestigio e acessar o Shop)*
 
 >**Obs:** Comandos de jogadores não necessitam de permissão!
 
 #### Staff:
-**setppoits (quantidade) (jogador):** *Seta um valor de pontos para determinado jogador.*
-**addppoints (quantidade) (jogador):** *Adiciona um valor de pontos para determinado jogador.*
-**setprestige (quantidade) (jogador):** *Seta um valor de prestigio para determinado jogador.*
-**addprestige (quantidade) (jogador):** *Adiciona um valor de prestigio para determinado jogador.*
+
+ - **setppoits (quantidade) (jogador):** *Seta um valor de pontos para determinado jogador.*
+ - **addppoints (quantidade) (jogador):** *Adiciona um valor de pontos para determinado jogador.*
+ - **setprestige (quantidade) (jogador):** *Seta um valor de prestigio para determinado jogador.*
+ - **addprestige (quantidade) (jogador):** *Adiciona um valor de prestigio para determinado jogador.*
 
 >**Permissão:** neroprestige.admin
 
