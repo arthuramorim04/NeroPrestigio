@@ -1,12 +1,13 @@
 shop:
-  shopDeArmaduras:
-    name: "&eItens Basicos"
-    id: 35
-    data: 4
-    slot: 30
+  Pvp:
+    name: "&eItens PVP"
+    id: 261
+    data: 0
+    slot: 20
     glow: true
     lore:
-      - '&fCompre armaduras prestigio'
+      - '&fCompre itens prestigio'
+      - '&fpara o seu pvp!'
     items:
       espada:
         name: "&bEspada Prestigio"
@@ -21,9 +22,11 @@ shop:
           - 'FIRE_ASPECT,5'
         lore:
           - ''
-          - '&eUm poderoso item para aqueles'
-          - 'que atingiram a gloria eterna.'
+          - '&aUm poderoso item para aqueles'
+          - '&aque atingiram a gloria eterna.'
           - '&ftipo: &dRARO'
+        cmd:
+          - 'tm bc &6O jogador &b%player% &6comprou \n &bEspada Prestigio'
         glow: false
         onlyCmd: false
       capacete:
@@ -38,8 +41,8 @@ shop:
           - 'DURABILITY,15'
         lore:
           - ''
-          - '&eUm poderoso item para aqueles'
-          - 'que atingiram a gloria eterna.'
+          - '&aUm poderoso item para aqueles'
+          - '&aque atingiram a gloria eterna.'
           - '&ftipo: &dRARO'
         glow: false
         onlyCmd: false
@@ -56,8 +59,8 @@ shop:
           - 'THORNS,5'
         lore:
           - ''
-          - '&eUm poderoso item para aqueles'
-          - 'que atingiram a gloria eterna.'
+          - '&aUm poderoso item para aqueles'
+          - '&aque atingiram a gloria eterna.'
           - '&ftipo: &dRARO'
         glow: false
         onlyCmd: false
@@ -73,8 +76,8 @@ shop:
           - 'DURABILITY,15'
         lore:
           - ''
-          - '&eUm poderoso item para aqueles'
-          - 'que atingiram a gloria eterna.'
+          - '&aUm poderoso item para aqueles'
+          - '&aque atingiram a gloria eterna.'
           - '&ftipo: &dRARO'
         glow: false
         onlyCmd: false
@@ -91,8 +94,8 @@ shop:
           - 'DEPTH_STRIDER,2'
         lore:
           - ''
-          - '&eUm poderoso item para aqueles'
-          - 'que atingiram a gloria eterna.'
+          - '&aUm poderoso item para aqueles'
+          - '&aque atingiram a gloria eterna.'
           - '&ftipo: &dRARO'
         glow: false
         onlyCmd: false
@@ -114,7 +117,7 @@ shop:
     name: "&dItens Raros"
     id: 385
     data: 0
-    slot: 32
+    slot: 31
     glow: true
     lore:
       - '&fClique para acessar o menu'
@@ -133,4 +136,29 @@ shop:
         glow: true
         cmd:
           - 'tm broadcast &6O jogador &b%player% \n &6Mandou um OI!'
+        onlyCmd: true
+  Permissoes:
+    name: "&bPermissoes"
+    id: 339
+    data: 0
+    slot: 24
+    glow: true
+    lore:
+      - ''
+      - '&fClique para adquirir permissoes'
+    items:
+      espada:
+        name: "&bFly no mundo Plot"
+        id: 288
+        data: 0
+        amount: 1
+        price: 100
+        slot: 22
+        lore:
+          - ''
+          - '&eAo clicar voce recebera a'
+          - '&epermissao para voar na plot!'
+        glow: true
+        cmd:
+          - 'pex user %player% add rankup-fly'
         onlyCmd: true
