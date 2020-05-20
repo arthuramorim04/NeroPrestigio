@@ -25,27 +25,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00ffa6b8-0f87-4a2b-bd39-627e044c5920" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/NeroPrestigio.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/taks/SavePlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/NeroPrestigio.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/taks/SavePlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/NeroPrestigio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/NeroPrestigio.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/controllers/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/controllers/PlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/Menus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/Menus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/StaticMenus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/menus/StaticMenus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/taks/SavePlayerStats.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/commands/PlayerCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/commands/PlayerCommands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/controllers/PlayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/controllers/PlayerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/InvShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/InvShop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/InventoryEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/InventoryEvents.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/PlayerEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/events/PlayerEvents.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/menus/Menus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/menus/Menus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/menus/StaticMenus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/menus/StaticMenus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/taks/SavePlayerStats$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/taks/SavePlayerStats.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/PrestigePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/PrestigePlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +132,8 @@
       <workItem from="1589914634903" duration="5000" />
       <workItem from="1589938908100" duration="3000" />
       <workItem from="1589938944223" duration="159000" />
-      <workItem from="1589939140675" duration="7867000" />
+      <workItem from="1589939140675" duration="10054000" />
+      <workItem from="1589980385068" duration="1007000" />
     </task>
     <servers />
   </component>
@@ -205,33 +191,33 @@
     <state x="526" y="187" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1589551965300" />
     <state x="739" y="266" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1589903358527" />
     <state x="740" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589314034106" />
-    <state width="938" height="341" key="GridCell.Tab.0.bottom" timestamp="1589946052693">
+    <state width="1877" height="341" key="GridCell.Tab.0.bottom" timestamp="1589981188618">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="661" height="227" key="GridCell.Tab.0.bottom/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589745911548" />
     <state width="1323" height="325" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589822249273" />
-    <state width="938" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1589946052693" />
+    <state width="1877" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1589981188618" />
     <state width="1877" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589465958784" />
-    <state width="938" height="341" key="GridCell.Tab.0.center" timestamp="1589946052692">
+    <state width="1877" height="341" key="GridCell.Tab.0.center" timestamp="1589981188618">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="661" height="227" key="GridCell.Tab.0.center/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589745911548" />
     <state width="1323" height="325" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589822249273" />
-    <state width="938" height="341" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1589946052692" />
+    <state width="1877" height="341" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1589981188618" />
     <state width="1877" height="341" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589465958784" />
-    <state width="938" height="341" key="GridCell.Tab.0.left" timestamp="1589946052692">
+    <state width="1877" height="341" key="GridCell.Tab.0.left" timestamp="1589981188617">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="661" height="227" key="GridCell.Tab.0.left/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589745911548" />
     <state width="1323" height="325" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589822249272" />
-    <state width="938" height="341" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1589946052692" />
+    <state width="1877" height="341" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1589981188617" />
     <state width="1877" height="341" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589465958784" />
-    <state width="938" height="341" key="GridCell.Tab.0.right" timestamp="1589946052692">
+    <state width="1877" height="341" key="GridCell.Tab.0.right" timestamp="1589981188618">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="661" height="227" key="GridCell.Tab.0.right/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1589745911548" />
     <state width="1323" height="325" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589822249273" />
-    <state width="938" height="341" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1589946052692" />
+    <state width="1877" height="341" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1589981188618" />
     <state width="1877" height="341" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1589465958784" />
     <state width="1323" height="325" key="GridCell.Tab.1.bottom" timestamp="1589822249275">
       <screen x="0" y="0" width="1366" height="738" />
@@ -281,5 +267,16 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1588785603364" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/arthuramorim/entity/PrestigePlayer.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
