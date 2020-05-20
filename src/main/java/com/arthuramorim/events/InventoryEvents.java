@@ -108,11 +108,15 @@ public class InventoryEvents implements Listener {
                 return;
             }
 
+
             try {
+                String title = e.getInventory().getTitle();
+                String titleInv = StaticMenus.titleInv;
                 e.setCancelled(true);
                 String[] split = e.getInventory().getTitle().split(StringColor.color("&bCategoria: "));
+                String s = LoadInvAndItems.getArrayShopInvs().toString();
                 for (InvShop inv : LoadInvAndItems.getArrayShopInvs()) {
-                    if (inv.getName().equals(split[1])) {
+                    if (inv.getName().equals(split[1].trim())) {
 
                         ItemShop itemShop = inv.getItemsVenda().get(e.getSlot());
                         PrestigePlayer prestigePlayer = Main.getHashPlayer().get(p.getName());
@@ -156,7 +160,6 @@ public class InventoryEvents implements Listener {
                             return;
                         }
                     }
-                    break;
                 }
             } catch (Exception err) {
                 return;
