@@ -2,9 +2,6 @@ package com.arthuramorim.commands;
 
 import com.arthuramorim.Main;
 import com.arthuramorim.controllers.PlayerController;
-import com.arthuramorim.enginers.LoadInvAndItems;
-import com.arthuramorim.entity.InvShop;
-import com.arthuramorim.entity.ItemShop;
 import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.menus.Menus;
 import com.arthuramorim.utils.StringColor;
@@ -23,7 +20,6 @@ public class PlayerCommands implements CommandExecutor {
         Player p = (Player) sender;
 
 
-
         if (!(p instanceof Player)) return false;
 
         if (args.length == 0) {
@@ -35,255 +31,149 @@ public class PlayerCommands implements CommandExecutor {
             }
 
             if (command.getName().equalsIgnoreCase("ppoints")) {
-                int controller = 0;
-                for (PrestigePlayer player : Main.getArrayPlayer()) {
-                    if (player.getUuid().equals(p.getUniqueId())) {
 
-                        p.sendMessage(StringColor.color("\n&ePontos de Prestigio: &f" + player.getPoints() + "\n"));
-                        controller = -1;
-                        return false;
+                try {
+                    PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+                    p.sendMessage(StringColor.color("\n&ePontos de Prestigio: &f" + player.getPoints() + "\n"));
+                    return false;
 
-                    }
-                }
-                if (controller == 0) {
+                } catch (NullPointerException e) {
                     PlayerController.loadPlayer(p.getName(), p.getUniqueId());
-                    for (PrestigePlayer player : Main.getArrayPlayer()) {
-                        if (player.getUuid().equals(p.getUniqueId())) {
-
-                            p.sendMessage(StringColor.color("\n&ePontos de Prestigio: &f" + player.getPoints() + "\n"));
-                            controller = -1;
-                            return false;
-
-                        }
-                    }
-                }else{
-                    p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, entre em contato com um staff"));
+                    PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+                    p.sendMessage(StringColor.color("\n&ePontos de Prestigio: &f" + player.getPoints() + "\n"));
+                    return false;
+                } catch (Exception e) {
+                    p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com um staff"));
                 }
 
-            }
 
+                if (command.getName().equalsIgnoreCase("prestigios")) {
+                    try {
 
-            if (command.getName().equalsIgnoreCase("prestigios")) {
-                int controller = 0;
-                for (PrestigePlayer player : Main.getArrayPlayer()) {
-                    if (player.getUuid().equals(p.getUniqueId())) {
+                        PrestigePlayer player = Main.getHashPlayer().get(p.getName());
                         p.sendMessage(StringColor.color("\n&ePrestigios : &f" + player.getPrestige()));
-                        controller = -1;
                         return false;
-                    }
 
-                }
-                if (controller == 0) {
-                    PlayerController.loadPlayer(p.getName(), p.getUniqueId());
-                    for (PrestigePlayer player : Main.getArrayPlayer()) {
-                        if (player.getUuid().equals(p.getUniqueId())) {
-                            p.sendMessage(StringColor.color("\n&ePrestigios : &f" + player.getPrestige()));
-                            controller = -1;
-                            return false;
-                        }
+                    } catch (NullPointerException e) {
 
-                    }
-                }else{
-                    p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, entre em contato com um staff"));
-                }
-            }
-        }
-
-        if (args.length == 2) {
-            if (p.hasPermission("neroprestige.admin")) {
-                if (command.getName().equalsIgnoreCase("setppoints")) {
-                    try {
-
-                        Boolean existAlt = false;
-                        int controller = 0;
-
-                        Integer quantity = Integer.valueOf(args[0]);
-                        Player target = Bukkit.getPlayer(args[1]);
-                        if (quantity >= 0 && target instanceof Player) {
-                            for (PrestigePlayer player : Main.getArrayPlayer()) {
-                                if (player.getUuid().equals(target.getUniqueId())) {
-                                    player.setPoints(quantity);
-                                    target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
-                                    sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
-                                    controller = -1;
-                                    return false;
-                                }
-                            }
-                            if (controller == 0) {
-                                if (quantity >= 0 && target instanceof Player) {
-                                    PlayerController.loadPlayer(target.getName(), target.getUniqueId());
-                                    for (PrestigePlayer player : Main.getArrayPlayer()) {
-                                        if (player.getUuid().equals(target.getUniqueId())) {
-                                            player.setPoints(quantity);
-                                            target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
-                                            sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
-                                            controller = -1;
-                                            if(!target.isOnline()){
-                                                PlayerController.savePlayerOnLeft(target.getUniqueId());
-                                            }
-                                            return false;
-                                        }
-                                    }
-                                }
-                            }else{
-                                p.sendMessage(StringColor.color("&cVoce tentou setar um valor de pontos menor que 1 ou o jogador nao esta online."));
-                            }
-                        } else {
-
-                            p.sendMessage(StringColor.color("&cO jogador nao existe."));
-
-                        }
+                        PlayerController.loadPlayer(p.getName(), p.getUniqueId());
+                        PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+                        p.sendMessage(StringColor.color("\n&ePrestigios : &f" + player.getPrestige()));
+                        return false;
 
                     } catch (Exception e) {
-
-                        System.out.println(e.getMessage());
-
+                        p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com um staff"));
                     }
+
                 }
 
-                if (command.getName().equalsIgnoreCase("addppoints")) {
-                    try {
 
-                        Boolean existAlt = false;
-                        int controller = 0;
+                if (args.length == 2) {
+                    if (p.hasPermission("neroprestige.admin")) {
+                        if (command.getName().equalsIgnoreCase("setppoints")) {
+                            try {
 
-                        Integer quantity = Integer.valueOf(args[0]);
-                        Player target = Bukkit.getPlayer(args[1]);
-                        if (quantity >= 0 && target instanceof Player) {
-                            for (PrestigePlayer player : Main.getArrayPlayer()) {
-                                if (player.getUuid().equals(target.getUniqueId())) {
-                                    player.addPoints(quantity);
-                                    target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
-                                    sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
-                                    controller = -1;
-                                    return false;
-                                }
+                                Integer quantity = Integer.valueOf(args[0]);
+                                Player target = Bukkit.getPlayer(args[1]);
+                                PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                                player.setPoints(quantity);
+                                target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
+                                sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
+                                return false;
+
+                            } catch (NullPointerException e) {
+
+                                Integer quantity = Integer.valueOf(args[0]);
+                                Player target = Bukkit.getPlayer(args[1]);
+                                PlayerController.loadPlayer(target.getName(), target.getUniqueId());
+                                PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                                player.setPoints(quantity);
+                                target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
+                                sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
+                                return false;
+
+                            } catch (Exception e) {
+                                p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
                             }
-                            if (controller == 0) {
-                                if (quantity >= 0 && target instanceof Player) {
-                                    PlayerController.loadPlayer(target.getName(), target.getUniqueId());
-                                    for (PrestigePlayer player : Main.getArrayPlayer()) {
-                                        if (player.getUuid().equals(target.getUniqueId())) {
-                                            player.addPoints(quantity);
-                                            target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
-                                            sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
-                                            controller = -1;
-                                            if(!target.isOnline()){
-                                                PlayerController.savePlayerOnLeft(target.getUniqueId());
-                                            }
-                                            return false;
-                                        }
-                                    }
-                                }
-                            }else{
-                                p.sendMessage(StringColor.color("&cVoce tentou setar um valor de pontos menor que 1 ou o jogador nao esta online."));
-                            }
-                        } else {
+                        }
 
-                            p.sendMessage(StringColor.color("&cO jogador nao existe."));
+                        if (command.getName().equalsIgnoreCase("addppoints")) {
+                            try {
+
+                                Integer quantity = Integer.valueOf(args[0]);
+                                Player target = Bukkit.getPlayer(args[1]);
+                                PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                                player.addPoints(quantity);
+                                target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
+                                sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
+
+                            } catch (NullPointerException e) {
+
+                                Integer quantity = Integer.valueOf(args[0]);
+                                Player target = Bukkit.getPlayer(args[1]);
+                                PlayerController.loadPlayer(target.getName(), target.getUniqueId());
+                                PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                                player.addPoints(quantity);
+                                target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
+                                sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
+
+                            } catch (Exception e) {
+                                p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
+                            }
+
+                        }
+                        if (command.getName().equalsIgnoreCase("addprestige")) {
+                            try {
+
+                                Integer quantity = Integer.valueOf(args[0]);
+                                Player target = Bukkit.getPlayer(args[1]);
+                                PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                                player.addPrestige(quantity);
+                                target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
+                                sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce adicionou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
+
+                            } catch (NullPointerException e) {
+
+                                Integer quantity = Integer.valueOf(args[0]);
+                                Player target = Bukkit.getPlayer(args[1]);
+                                PlayerController.loadPlayer(target.getName(), target.getUniqueId());
+                                PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                                player.addPrestige(quantity);
+                                target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
+                                sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce adicionou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
+
+
+                            } catch (Exception e) {
+                                p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
+                            }
 
                         }
 
-                    } catch (Exception e) {
+                        if (command.getName().equalsIgnoreCase("setprestige")) {
+                            try {
 
-                        System.out.println(e.getMessage());
+                                Integer quantity = Integer.valueOf(args[0]);
+                                Player target = Bukkit.getPlayer(args[1]);
+                                PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                                player.setPrestige(quantity);
+                                target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
+                                sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce setou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
 
-                    }
-                }
-                if (command.getName().equalsIgnoreCase("addprestige")) {
-                    try {
+                            } catch (NullPointerException e) {
 
-                        Boolean existAlt = false;
-                        int controller = 0;
+                                Integer quantity = Integer.valueOf(args[0]);
+                                Player target = Bukkit.getPlayer(args[1]);
+                                PlayerController.loadPlayer(target.getName(), target.getUniqueId());
+                                PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                                player.setPrestige(quantity);
+                                target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
+                                sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce setou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
 
-                        Integer quantity = Integer.valueOf(args[0]);
-                        Player target = Bukkit.getPlayer(args[1]);
-                        if (quantity >= 0 && target instanceof Player) {
-                            for (PrestigePlayer player : Main.getArrayPlayer()) {
-                                if (player.getUuid().equals(target.getUniqueId())) {
-                                    player.addPrestige(quantity);
-                                    target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
-                                    sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce adicionou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
-                                    controller = -1;
-                                    return false;
-                                }
+                            } catch (Exception e) {
+                                p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
                             }
-                            if (controller == 0) {
-                                if (quantity >= 0 && target instanceof Player) {
-                                    PlayerController.loadPlayer(target.getName(), target.getUniqueId());
-                                    for (PrestigePlayer player : Main.getArrayPlayer()) {
-                                        if (player.getUuid().equals(target.getUniqueId())) {
-                                            player.addPrestige(quantity);
-                                            target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
-                                            sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce adicionou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
-                                            controller = -1;
-                                            if(!target.isOnline()){
-                                                PlayerController.savePlayerOnLeft(target.getUniqueId());
-                                            }
-                                            return false;
-                                        }
-                                    }
-                                }
-                            }else{
-                                p.sendMessage(StringColor.color("&cVoce tentou adicionar uma quantidade de prestigio menor que 1 ou o jogador nao esta online."));
-                            }
-                        } else {
-
-                            p.sendMessage(StringColor.color("&cO jogador nao existe."));
 
                         }
-
-                    } catch (Exception e) {
-
-                        System.out.println(e.getMessage());
-
-                    }
-                }
-
-                if (command.getName().equalsIgnoreCase("setprestige")) {
-                    try {
-
-                        Boolean existAlt = false;
-                        int controller = 0;
-
-                        Integer quantity = Integer.valueOf(args[0]);
-                        Player target = Bukkit.getPlayer(args[1]);
-                        if (quantity >= 0 && target instanceof Player) {
-                            for (PrestigePlayer player : Main.getArrayPlayer()) {
-                                if (player.getUuid().equals(target.getUniqueId())) {
-                                    player.setPrestige(quantity);
-                                    target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
-                                    sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce setou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
-                                    controller = -1;
-                                    return false;
-                                }
-                            }
-                            if (controller == 0) {
-                                if (quantity >= 0 && target instanceof Player) {
-                                    PlayerController.loadPlayer(target.getName(), target.getUniqueId());
-                                    for (PrestigePlayer player : Main.getArrayPlayer()) {
-                                        if (player.getUuid().equals(target.getUniqueId())) {
-                                            player.setPrestige(quantity);
-                                            target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
-                                            sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce setou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
-                                            controller = -1;
-                                            return false;
-                                        }
-                                    }
-                                }
-                            }else{
-                                p.sendMessage(StringColor.color("&cVoce tentou setar uma quantidade de prestigio menor que 1 ou o jogador nao esta online."));
-                            }
-                        } else {
-
-                            p.sendMessage(StringColor.color("&cO jogador nao existe."));
-
-                        }
-
-                    } catch (Exception e) {
-
-                        System.out.println(e.getMessage());
-
                     }
                 }
             }
