@@ -3,6 +3,8 @@ package com.arthuramorim.controllers;
 import com.arthuramorim.Main;
 import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.utils.StringColor;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -57,7 +59,7 @@ public class PlayerController {
                 Integer points = result.getInt("points");
                 p.setPoints(points);
                 p.setPrestige(prestige);
-                Main.getArrayPlayer().add(p);
+                Main.getHashPlayer().put(p.getName(), p);
 
             }
             if (!result.next()) {
@@ -98,27 +100,19 @@ public class PlayerController {
     }
 
 
-    public static void savePlayerOnLeft(UUID uuid) {
+    public static void savePlayerOnLeft(String name) {
 
+        PrestigePlayer player = Main.getHashPlayer().get(name);
+        savePlayer(player);
+        Main.getHashPlayer().remove(player);
+        return;
 
-        for (PrestigePlayer player : Main.getArrayPlayer()) {
-
-            if (player.getUuid().equals(uuid)) {
-                savePlayer(player);
-                Main.getArrayPlayer().remove(player);
-                return;
-            }
-        }
     }
 
-    public static void savePlayerTask(PrestigePlayer p){
-        for(PrestigePlayer player : Main.getArrayPlayer()){
-            if(player.getUuid().equals(p.getUuid())){
-                savePlayer(p);
-                Main.getArrayPlayer().remove(player);
-                Main.getArrayPlayer().add(p);
+    public static void savePlayerTask(PrestigePlayer p) {
 
-            }
-        }
+        PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+        savePlayer(player);
+
     }
 }
