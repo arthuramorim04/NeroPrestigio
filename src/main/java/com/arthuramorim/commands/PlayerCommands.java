@@ -79,6 +79,7 @@ public class PlayerCommands implements CommandExecutor {
                                 player.setPoints(quantity);
                                 target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
                                 sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
+                                Main.getAltPlayer().add(player);
                                 return false;
 
                             } catch (NullPointerException e) {
@@ -90,6 +91,7 @@ public class PlayerCommands implements CommandExecutor {
                                 player.setPoints(quantity);
                                 target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
                                 sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
+                                Main.getAltPlayer().add(player);
                                 return false;
 
                             } catch (Exception e) {
@@ -106,6 +108,8 @@ public class PlayerCommands implements CommandExecutor {
                                 player.addPoints(quantity);
                                 target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
                                 sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
+                                Main.getAltPlayer().add(player);
+                                return false;
 
                             } catch (NullPointerException e) {
 
@@ -116,6 +120,8 @@ public class PlayerCommands implements CommandExecutor {
                                 player.addPoints(quantity);
                                 target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
                                 sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
+                                Main.getAltPlayer().add(player);
+                                return false;
 
                             } catch (Exception e) {
                                 p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
@@ -131,6 +137,8 @@ public class PlayerCommands implements CommandExecutor {
                                 player.addPrestige(quantity);
                                 target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
                                 sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce adicionou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
+                                Main.getAltPlayer().add(player);
+                                return false;
 
                             } catch (NullPointerException e) {
 
@@ -141,7 +149,8 @@ public class PlayerCommands implements CommandExecutor {
                                 player.addPrestige(quantity);
                                 target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
                                 sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce adicionou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
-
+                                Main.getAltPlayer().add(player);
+                                return false;
 
                             } catch (Exception e) {
                                 p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
@@ -158,6 +167,8 @@ public class PlayerCommands implements CommandExecutor {
                                 player.setPrestige(quantity);
                                 target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
                                 sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce setou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
+                                Main.getAltPlayer().add(player);
+                                return false;
 
                             } catch (NullPointerException e) {
 
@@ -168,6 +179,8 @@ public class PlayerCommands implements CommandExecutor {
                                 player.setPrestige(quantity);
                                 target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
                                 sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce setou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
+                                Main.getAltPlayer().add(player);
+                                return false;
 
                             } catch (Exception e) {
                                 p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));

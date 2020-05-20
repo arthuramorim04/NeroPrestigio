@@ -25,7 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00ffa6b8-0f87-4a2b-bd39-627e044c5920" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/shop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/shop.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/commands/PlayerCommands.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +129,7 @@
       <workItem from="1589938908100" duration="3000" />
       <workItem from="1589938944223" duration="159000" />
       <workItem from="1589939140675" duration="10054000" />
-      <workItem from="1589980385068" duration="7892000" />
+      <workItem from="1589980385068" duration="8643000" />
     </task>
     <servers />
   </component>
