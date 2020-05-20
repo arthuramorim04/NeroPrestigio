@@ -45,7 +45,7 @@ public class LoadInvAndItems {
                     invShop.setIconeInv(iconeInv.build());
                     invShop.setSlot(slot);
 
-                    invShop.setName(StringColor.color(invName));
+                    invShop.setName(StringColor.color(nome));
 
                     HashMap<Integer,ItemShop> items = carregaItems(invName);
 
