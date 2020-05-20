@@ -26,10 +26,7 @@
   <component name="ChangeListManager">
     <list default="true" id="00ffa6b8-0f87-4a2b-bd39-627e044c5920" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arthuramorim/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/PrestigePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arthuramorim/entity/PrestigePlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/shop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/shop.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +130,7 @@
       <workItem from="1589938908100" duration="3000" />
       <workItem from="1589938944223" duration="159000" />
       <workItem from="1589939140675" duration="10054000" />
-      <workItem from="1589980385068" duration="1007000" />
+      <workItem from="1589980385068" duration="2855000" />
     </task>
     <servers />
   </component>

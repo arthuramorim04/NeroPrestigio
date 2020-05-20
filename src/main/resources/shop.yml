@@ -1,34 +1,132 @@
 shop:
-  basica:
+  shopDeArmaduras:
     name: "&eItens Basicos"
     id: 35
     data: 4
     slot: 30
     glow: true
     lore:
-      - '&fCompre itens &fBASICOS'
+      - '&fCompre armaduras prestigio'
     items:
-      item1:
-        name: "&bEspada Prestigio1"
+      espada:
+        name: "&bEspada Prestigio"
         id: 276
+        data: 0
+        amount: 1
+        price: 1000
+        slot: 13
+        enchantment:
+          - 'DAMAGE_ALL,10'
+          - 'DURABILITY,5'
+          - 'FIRE_ASPECT,5'
+        lore:
+          - ''
+          - '&eUm poderoso item para aqueles'
+          - 'que atingiram a gloria eterna.'
+          - '&ftipo: &dRARO'
+        glow: false
+        onlyCmd: false
+      capacete:
+        name: "&bCapacete Prestigio"
+        id: 310
+        data: 0
+        amount: 1
+        price: 1000
+        slot: 28
+        enchantment:
+          - 'PROTECTION_ENVIRONMENTAL,15'
+          - 'DURABILITY,15'
+        lore:
+          - ''
+          - '&eUm poderoso item para aqueles'
+          - 'que atingiram a gloria eterna.'
+          - '&ftipo: &dRARO'
+        glow: false
+        onlyCmd: false
+      protetor:
+        name: "&bProtetor Prestigio"
+        id: 311
+        data: 0
+        amount: 1
+        price: 1000
+        slot: 30
+        enchantment:
+          - 'PROTECTION_ENVIRONMENTAL,15'
+          - 'DURABILITY,15'
+          - 'THORNS,5'
+        lore:
+          - ''
+          - '&eUm poderoso item para aqueles'
+          - 'que atingiram a gloria eterna.'
+          - '&ftipo: &dRARO'
+        glow: false
+        onlyCmd: false
+      calca:
+        name: "&bCalca Prestigio"
+        id: 312
         data: 0
         amount: 1
         price: 1000
         slot: 32
         enchantment:
-          - 'DURABILITY,5'
+          - 'PROTECTION_ENVIRONMENTAL,15'
+          - 'DURABILITY,15'
         lore:
-          - '&fEspada Prestigio'
-          - '&ftipo: &7COMUM'
+          - ''
+          - '&eUm poderoso item para aqueles'
+          - 'que atingiram a gloria eterna.'
+          - '&ftipo: &dRARO'
         glow: false
-        cmd:
-          - 'tm broadcast oi'
-        onlyCmd: true
-  avancada:
-    name: "&eItens Raros"
+        onlyCmd: false
+      bota:
+        name: "&bBota Prestigio"
+        id: 313
+        data: 0
+        amount: 1
+        price: 1000
+        slot: 34
+        enchantment:
+          - 'PROTECTION_ENVIRONMENTAL,15'
+          - 'DURABILITY,15'
+          - 'DEPTH_STRIDER,2'
+        lore:
+          - ''
+          - '&eUm poderoso item para aqueles'
+          - 'que atingiram a gloria eterna.'
+          - '&ftipo: &dRARO'
+        glow: false
+        onlyCmd: false
+      macaDourada:
+        name: "&bMaca Dourada"
+        id: 322
+        data: 1
+        amount: 16
+        price: 100
+        slot: 40
+        glow: false
+        onlyCmd: false
+
+  itensRaros:
+    name: "&dItens Raros"
     id: 385
     data: 0
     slot: 32
     glow: true
     lore:
-      - '&fCompre itens &bRAROS'
+      - '&fClique para acessar o menu'
+      - '&fde itens raros'
+    items:
+      espada:
+        name: "&bOi para o servidor"
+        id: 323
+        data: 0
+        amount: 1
+        price: 100
+        slot: 22
+        lore:
+          - ''
+          - '&eEnvie um oi para o servidor!'
+        glow: true
+        cmd:
+          - 'tm broadcast &6O jogador &b%player% \n &6Mandou um OI!'
+        onlyCmd: true
