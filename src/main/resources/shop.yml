@@ -103,6 +103,10 @@ shop:
         amount: 16
         price: 100
         slot: 40
+        lore:
+          - ''
+          - '&eMaca dourada'
+          - '&ftipo: &7COMUM'
         glow: false
         onlyCmd: false
 
