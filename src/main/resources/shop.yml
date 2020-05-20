@@ -1,3 +1,29 @@
+#    --------------------------Enchant Name List ----------------------------------------------------
+#    ARROW_FIRESets entities on fire when hit by arrows shot from a bow
+#    ARROW_INFINITEProvides infinite arrows when shooting a bow
+#    ARROW_KNOCKBACKProvides a knockback when an entity is hit by an arrow from a bow
+#    DAMAGE_ALLIncreases damage against all targets
+#    DAMAGE_ARTHROPODSIncreases damage against arthropod targets
+#    DAMAGE_UNDEADIncreases damage against undead targets
+#    DEPTH_STRIDERIncreases walking speed while in water
+#    DIG_SPEEDIncreases the rate at which you mine/dig
+#    DURABILITYDecreases the rate at which a tool looses durability
+#    FIRE_ASPECTWhen attacking a target, has a chance to set them on fire
+#    KNOCKBACKAll damage to other targets will knock them back when hit
+#    LOOT_BONUS_BLOCKSProvides a chance of gaining extra loot when destroying blocks
+#    LOOT_BONUS_MOBSProvides a chance of gaining extra loot when killing monsters
+#    LUCKDecreases odds of catching worthless junk
+#    LUREIncreases rate of fish biting your hook
+#    OXYGENDecreases the rate of air loss whilst underwater
+#    PROTECTION_ENVIRONMENTALProvides protection against environmental damage
+#    PROTECTION_EXPLOSIONSProvides protection against explosive damage
+#    PROTECTION_FALLProvides protection against fall damage
+#    PROTECTION_FIREProvides protection against fire damage
+#    PROTECTION_PROJECTILEProvides protection against projectile damage
+#    SILK_TOUCHAllows blocks to drop themselves instead of fragments (for example, stone instead of cobblestone)
+#    THORNSDamages the attacker
+#    WATER_WORKERIncreases the speed at which a player may mine underwater
+#    --------------------------Enchant Name List ----------------------------------------------------
 shop:
   Pvp:
     name: "&eItens PVP"
