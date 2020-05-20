@@ -31,27 +31,26 @@ public class Menus {
         MakeItem profilePlayer = new MakeItem(347);
 
         ArrayList<String> infoPlayer = new ArrayList<>();
-        int controller = 0;
 
-        for (PrestigePlayer player : Main.getArrayPlayer()) {
-            if (player.getUuid().equals(p.getUniqueId())) {
-                infoPlayer.add(StringColor.color("&ePrestigios: &f" + player.getPrestige()));
-                infoPlayer.add(StringColor.color("&ePontos: &f" + player.getPoints()));
-                controller = -1;
-            }
-        }
-        if (controller == 0) {
-            PlayerController.loadPlayer(p.getName(), p.getUniqueId());
-            for (PrestigePlayer player : Main.getArrayPlayer()) {
-                if (player.getUuid().equals(p.getUniqueId())) {
-                    infoPlayer.add(StringColor.color("&ePrestigios: &f" + player.getPrestige()));
-                    infoPlayer.add(StringColor.color("&ePontos: &f" + player.getPoints()));
-                    controller = -1;
-                }
-            }
+        try{
+
+            PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+            infoPlayer.add(StringColor.color("&ePrestigios: &f" + player.getPrestige()));
+            infoPlayer.add(StringColor.color("&ePontos: &f" + player.getPoints()));
+
+        }catch (NullPointerException e){
+            PlayerController.loadPlayer(p.getName(),p.getUniqueId());
+            PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+            infoPlayer.add(StringColor.color("&ePrestigios: &f" + player.getPrestige()));
+            infoPlayer.add(StringColor.color("&ePontos: &f" + player.getPoints()));
+        }catch (Exception e){
+            p.closeInventory();
+            p.sendMessage(StringColor.color("&cOcorreu um erro inesperado, tente novamente ou entre em contato com um staff."));
+            return;
         }
 
-        if (controller == -1) {
+
+
 
 
             profilePlayer.setName(StringColor.color("&eJogador: &f" + p.getName())).addLore(infoPlayer);
@@ -91,10 +90,6 @@ public class Menus {
 
             }
             p.openInventory(prestigeMainMenu);
-        }else{
-            p.closeInventory();
-            p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, entre em contato com um staff."));
-        }
     }
 
 
