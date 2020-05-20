@@ -1,5 +1,6 @@
 package com.arthuramorim.entity;
 
+import com.arthuramorim.utils.Configs;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
@@ -51,7 +52,7 @@ public class PrestigePlayer {
     }
 
     public void addPoints() {
-        this.points = this.points + 500;
+        this.points = this.points + Configs.getConfigFile().getInt("resetPoints");
     }
 
     public Boolean removePoints(Integer points) {
