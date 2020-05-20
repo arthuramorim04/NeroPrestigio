@@ -33,7 +33,7 @@ public class PlayerEvents implements Listener {
     @EventHandler
     public void leftServer(PlayerQuitEvent e){
 
-        PlayerController.savePlayerOnLeft(e.getPlayer().getUniqueId());
+        PlayerController.savePlayerOnLeft(e.getPlayer().getName());
 
     }
 }
