@@ -43,8 +43,9 @@ public class PlayerCommands implements CommandExecutor {
                     p.sendMessage(StringColor.color("\n&ePontos de Prestigio: &f" + player.getPoints() + "\n"));
                     return false;
                 } catch (Exception e) {
-                    p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com um staff"));
+                    p.sendMessage(StringColor.color("&e[Prestigio] &cOcorreu um erro desconhecido, se o erro continuar entre em contato com um staff"));
                 }
+            }
 
 
                 if (command.getName().equalsIgnoreCase("prestigios")) {
@@ -62,21 +63,24 @@ public class PlayerCommands implements CommandExecutor {
                         return false;
 
                     } catch (Exception e) {
-                        p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com um staff"));
+                        p.sendMessage(StringColor.color("&e[Prestigio] &cOcorreu um erro desconhecido, se o erro continuar entre em contato com um staff"));
                     }
 
                 }
             }
-        }
-
 
         if (args.length == 2) {
+
             if (p.hasPermission("neroprestige.admin")) {
                 if (command.getName().equalsIgnoreCase("setppoints")) {
                     try {
 
                         Integer quantity = Integer.valueOf(args[0]);
                         Player target = Bukkit.getPlayer(args[1]);
+                        if(!(target instanceof Player)) {
+                            p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
+                            return false;
+                        }
                         PrestigePlayer player = Main.getHashPlayer().get(target.getName());
                         player.setPoints(quantity);
                         target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
@@ -88,6 +92,10 @@ public class PlayerCommands implements CommandExecutor {
 
                         Integer quantity = Integer.valueOf(args[0]);
                         Player target = Bukkit.getPlayer(args[1]);
+                        if(!(target instanceof Player)) {
+                            p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
+                            return false;
+                        }
                         PlayerController.loadPlayer(target.getName(), target.getUniqueId());
                         PrestigePlayer player = Main.getHashPlayer().get(target.getName());
                         player.setPoints(quantity);
@@ -97,7 +105,7 @@ public class PlayerCommands implements CommandExecutor {
                         return false;
 
                     } catch (Exception e) {
-                        p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
+                        p.sendMessage(StringColor.color("&e[Prestigio] &cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
                     }
                 }
 
@@ -106,6 +114,10 @@ public class PlayerCommands implements CommandExecutor {
 
                         Integer quantity = Integer.valueOf(args[0]);
                         Player target = Bukkit.getPlayer(args[1]);
+                        if(!(target instanceof Player)) {
+                            p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
+                            return false;
+                        }
                         PrestigePlayer player = Main.getHashPlayer().get(target.getName());
                         player.addPoints(quantity);
                         target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
@@ -117,6 +129,10 @@ public class PlayerCommands implements CommandExecutor {
 
                         Integer quantity = Integer.valueOf(args[0]);
                         Player target = Bukkit.getPlayer(args[1]);
+                        if(!(target instanceof Player)) {
+                            p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
+                            return false;
+                        }
                         PlayerController.loadPlayer(target.getName(), target.getUniqueId());
                         PrestigePlayer player = Main.getHashPlayer().get(target.getName());
                         player.addPoints(quantity);
@@ -126,7 +142,7 @@ public class PlayerCommands implements CommandExecutor {
                         return false;
 
                     } catch (Exception e) {
-                        p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
+                        p.sendMessage(StringColor.color("&e[Prestigio] &cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
                     }
 
                 }
@@ -135,6 +151,10 @@ public class PlayerCommands implements CommandExecutor {
 
                         Integer quantity = Integer.valueOf(args[0]);
                         Player target = Bukkit.getPlayer(args[1]);
+                        if(!(target instanceof Player)) {
+                            p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
+                            return false;
+                        }
                         PrestigePlayer player = Main.getHashPlayer().get(target.getName());
                         player.addPrestige(quantity);
                         target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
@@ -146,6 +166,10 @@ public class PlayerCommands implements CommandExecutor {
 
                         Integer quantity = Integer.valueOf(args[0]);
                         Player target = Bukkit.getPlayer(args[1]);
+                        if(!(target instanceof Player)) {
+                            p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
+                            return false;
+                        }
                         PlayerController.loadPlayer(target.getName(), target.getUniqueId());
                         PrestigePlayer player = Main.getHashPlayer().get(target.getName());
                         player.addPrestige(quantity);
@@ -155,7 +179,7 @@ public class PlayerCommands implements CommandExecutor {
                         return false;
 
                     } catch (Exception e) {
-                        p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
+                        p.sendMessage(StringColor.color("&e[Prestigio] &cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
                     }
 
                 }
@@ -165,6 +189,10 @@ public class PlayerCommands implements CommandExecutor {
 
                         Integer quantity = Integer.valueOf(args[0]);
                         Player target = Bukkit.getPlayer(args[1]);
+                        if(!(target instanceof Player)) {
+                            p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
+                            return false;
+                        }
                         PrestigePlayer player = Main.getHashPlayer().get(target.getName());
                         player.setPrestige(quantity);
                         target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
@@ -176,6 +204,10 @@ public class PlayerCommands implements CommandExecutor {
 
                         Integer quantity = Integer.valueOf(args[0]);
                         Player target = Bukkit.getPlayer(args[1]);
+                        if(!(target instanceof Player)) {
+                            p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
+                            return false;
+                        }
                         PlayerController.loadPlayer(target.getName(), target.getUniqueId());
                         PrestigePlayer player = Main.getHashPlayer().get(target.getName());
                         player.setPrestige(quantity);
@@ -185,7 +217,7 @@ public class PlayerCommands implements CommandExecutor {
                         return false;
 
                     } catch (Exception e) {
-                        p.sendMessage(StringColor.color("&cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
+                        p.sendMessage(StringColor.color("&e[Prestigio] &cOcorreu um erro desconhecido, se o erro continuar entre em contato com os desenvolvedores"));
                     }
 
                 }
