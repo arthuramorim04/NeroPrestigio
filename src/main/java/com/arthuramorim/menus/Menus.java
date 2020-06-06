@@ -14,7 +14,7 @@ import org.bukkit.inventory.Inventory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Menus {
+public class Menus{
 
     public static MakeItem backgroudPanel = new MakeItem(Material.STAINED_GLASS_PANE, (byte) 15);
     public static MakeItem prestige = new MakeItem(Material.EYE_OF_ENDER);
