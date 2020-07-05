@@ -11,13 +11,11 @@ import com.arthuramorim.utils.Configs;
 import com.arthuramorim.utils.MakeItem;
 import com.arthuramorim.utils.StringColor;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.inventory.ItemStack;
 
 public class InventoryEvents implements Listener {
 
