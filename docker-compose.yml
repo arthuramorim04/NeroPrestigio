@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-server
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: servidor_mine
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    ports:
+      - "3306:3306"  # Expondo a porta 3306 para o host
+    volumes:
+      - mysql-data:/var/lib/mysql  # Persistência de dados
+      - ./my.cnf:/etc/mysql/my.cnf
+    restart: always
+  # Se necessário, outros serviços podem ser adicionados aqui (como um serviço de web, etc.)
+
+volumes:
+  mysql-data:  # Volume para persistir dados do MySQL
+
+networks:
+# Não é necessário para este exemplo, pois estamos expondo diretamente para o host

@@ -1,6 +1,6 @@
 package com.arthuramorim.menus;
 
-import com.arthuramorim.Main;
+import com.arthuramorim.NeroPrestigio;
 import com.arthuramorim.controllers.PlayerController;
 import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.utils.Configs;
@@ -24,8 +24,13 @@ public class Menus{
     public static MakeItem arrow = new MakeItem(Material.ARROW);
     public static Inventory prestigeMainMenu = null;
 
+    public final NeroPrestigio plugin;
 
-    public static void mainMenuPrestige(Player p) {
+    public Menus(NeroPrestigio plugin) {
+        this.plugin = plugin;
+    }
+
+    public void mainMenuPrestige(Player p) {
 
         prestigeMainMenu = Bukkit.createInventory(null, 9 * 6, StringColor.color("&dPrestigio"));
         MakeItem profilePlayer = new MakeItem(347);
@@ -34,13 +39,13 @@ public class Menus{
 
         try{
 
-            PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+            PrestigePlayer player = this.plugin.getHashPlayer().get(p.getName());
             infoPlayer.add(StringColor.color("&ePrestigios: &f" + player.getPrestige()));
             infoPlayer.add(StringColor.color("&ePontos: &f" + player.getPoints()));
 
         }catch (NullPointerException e){
-            PlayerController.loadPlayer(p.getName(),p.getUniqueId());
-            PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+            this.plugin.getPc().loadPlayer(p.getName(),p.getUniqueId());
+            PrestigePlayer player = this.plugin.getHashPlayer().get(p.getName());
             infoPlayer.add(StringColor.color("&ePrestigios: &f" + player.getPrestige()));
             infoPlayer.add(StringColor.color("&ePontos: &f" + player.getPoints()));
         }catch (Exception e){

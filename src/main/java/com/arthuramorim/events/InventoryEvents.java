@@ -1,6 +1,6 @@
 package com.arthuramorim.events;
 
-import com.arthuramorim.Main;
+import com.arthuramorim.NeroPrestigio;
 import com.arthuramorim.enginers.LoadInvAndItems;
 import com.arthuramorim.entity.InvShop;
 import com.arthuramorim.entity.ItemShop;
@@ -19,8 +19,14 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 
 public class InventoryEvents implements Listener {
 
+    private final NeroPrestigio plugin;
+
+    public InventoryEvents(NeroPrestigio plugin) {
+        this.plugin = plugin;
+    }
+
     @EventHandler
-    public static void onOpenPrestigeInv(InventoryClickEvent e) {
+    public void onOpenPrestigeInv(InventoryClickEvent e) {
         Player p = (Player) e.getWhoClicked();
 
         if (!(p instanceof Player)) return;
@@ -35,7 +41,7 @@ public class InventoryEvents implements Listener {
                 if (MakeItem.checkIsSimilar(e.getCurrentItem(), Menus.prestige.build())) {
                     if (p.hasPermission("nero.prestigio")) {
 
-                        PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+                        PrestigePlayer player = this.plugin.getHashPlayer().get(p.getName());
                         if (player.addPrestige()) {
 
                             commandResetRankPlayer(p);
@@ -117,7 +123,7 @@ public class InventoryEvents implements Listener {
                     if (inv.getName().equals(split[1].trim())) {
 
                         ItemShop itemShop = inv.getItemsVenda().get(e.getSlot());
-                        PrestigePlayer prestigePlayer = Main.getHashPlayer().get(p.getName());
+                        PrestigePlayer prestigePlayer = this.plugin.getHashPlayer().get(p.getName());
 
                         if (prestigePlayer.getPoints() >= itemShop.getPrice()) {
 
@@ -128,7 +134,7 @@ public class InventoryEvents implements Listener {
                                     if (itemShop.getOnlyCmd()) {
                                         itemShop.executCommands(p.getName());
                                         p.sendMessage(StringColor.color("&aCompra realizada com sucesso!"));
-                                        Main.getAltPlayer().add(prestigePlayer);
+                                        this.plugin.getAltPlayer().add(prestigePlayer);
 
                                         return;
                                     } else {
@@ -136,12 +142,12 @@ public class InventoryEvents implements Listener {
                                             itemShop.executCommands(p.getName());
                                             p.getInventory().addItem(itemShop.getItems());
                                             p.sendMessage(StringColor.color("&aCompra realizada com sucesso!"));
-                                            Main.getAltPlayer().add(prestigePlayer);
+                                            this.plugin.getAltPlayer().add(prestigePlayer);
                                             return;
                                         } else {
                                             p.getInventory().addItem(itemShop.getItems());
                                             p.sendMessage(StringColor.color("&aCompra realizada com sucesso!"));
-                                            Main.getAltPlayer().add(prestigePlayer);
+                                            this.plugin.getAltPlayer().add(prestigePlayer);
                                             return;
                                         }
                                     }

@@ -1,8 +1,8 @@
 storage:
-  user: 'u1030_bw4bmA3Qjq'
-  pass: '+j8FAaC+9Q+=HixiA8Ek^lyl'
-  host: '192.99.100.105'
-  db: 's1030_dbdunkin'
+  user: 'nero'
+  pass: 'nero'
+  host: '192.168.2.10'
+  db: 'sv_mine'
   port: 3306
 
 lores:
