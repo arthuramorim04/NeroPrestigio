@@ -1,6 +1,6 @@
 package com.arthuramorim.utils;
 
-import com.arthuramorim.Main;
+import com.arthuramorim.NeroPrestigio;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -17,10 +17,10 @@ public class Configs {
     private static FileConfiguration shop;
 
     public static void createConfig() {
-        configFile = new File(Main.plugin.getDataFolder(), "config.yml");
+        configFile = new File(NeroPrestigio.plugin.getDataFolder(), "config.yml");
         if (!configFile.exists()) {
             configFile.getParentFile().mkdirs();
-            Main.plugin.saveResource("config.yml", false);
+            NeroPrestigio.plugin.saveResource("config.yml", false);
         }
 
         config = new YamlConfiguration();
@@ -32,10 +32,10 @@ public class Configs {
     }
 
     public static void createShop(){
-        shopFile = new File(Main.plugin.getDataFolder(), "shop.yml");
+        shopFile = new File(NeroPrestigio.plugin.getDataFolder(), "shop.yml");
         if(!shopFile.exists()){
             shopFile.getParentFile().mkdirs();
-            Main.plugin.saveResource("shop.yml", false);
+            NeroPrestigio.plugin.saveResource("shop.yml", false);
         }
 
         shop = new YamlConfiguration();

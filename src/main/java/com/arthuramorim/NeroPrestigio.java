@@ -1,13 +1,15 @@
 package com.arthuramorim;
 
 import com.arthuramorim.commands.PlayerCommands;
-import com.arthuramorim.database.DBConnection;
+import com.arthuramorim.controllers.PlayerController;
+import com.arthuramorim.database.sql.DatabaseManager;
 import com.arthuramorim.enginers.LoadInvAndItems;
 import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.events.InventoryEvents;
 import com.arthuramorim.events.PlayerEvents;
 import com.arthuramorim.taks.SavePlayer;
 import com.arthuramorim.utils.Configs;
+import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -15,13 +17,18 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Main extends JavaPlugin {
+public class NeroPrestigio extends JavaPlugin {
 
-    public static Main plugin;
-    private static DBConnection dbConnection;
-    private static HashMap<String,PrestigePlayer> hashPlayer = new HashMap<>();
-    private static ArrayList <PrestigePlayer> altPlayer = new ArrayList<>();
+    public static NeroPrestigio plugin;
+    @Getter
+    private DatabaseManager dbManager;
+    @Getter
+    private HashMap<String,PrestigePlayer> hashPlayer = new HashMap<>();
+    @Getter
+    private ArrayList <PrestigePlayer> altPlayer = new ArrayList<>();
     private SavePlayer sp;
+    @Getter
+    private PlayerController pc;
     @Override
     public void onEnable() {
         plugin = this;
@@ -44,22 +51,16 @@ public class Main extends JavaPlugin {
         Configs.createConfig();
         Configs.createShop();
 
-        String user = Configs.getConfigFile().getString("storage.user");
-        String pass = Configs.getConfigFile().getString("storage.pass");
-        String host = Configs.getConfigFile().getString("storage.host");
-        String db = Configs.getConfigFile().getString("storage.db");
-        Integer port = Configs.getConfigFile().getInt("storage.port");
-        dbConnection = new DBConnection(user, pass, host, port, db);
-        getDbConnection().openConnection();
+        initDatabaseConnection();
 
-        loadEvents();
-        loadCommands();
 
         LoadInvAndItems.loadInvShop();
+        pc = new PlayerController(this);
         //task
-        sp = new SavePlayer();
+        sp = new SavePlayer(this);
         sp.runTaskTimerAsynchronously(this,0L,20*600L);
-
+        loadEvents();
+        loadCommands();
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "["+plugin.getName()+"]" +"INICIALIZADO COM SUCESSO!");
 
     }
@@ -69,36 +70,42 @@ public class Main extends JavaPlugin {
 
         getServer().getConsoleSender().sendMessage(ChatColor.YELLOW + "["+plugin.getName()+"]" +"DESABILITANDO...");
         sp.saveAll();
-        getDbConnection().closeConnection();
+        dbManager.closeConnection();
         getServer().getConsoleSender().sendMessage(ChatColor.RED + "["+plugin.getName()+"]" +"DESABILITADO COM SUCESSO!");
 
     }
 
+    private void initDatabaseConnection() {
+        String user = Configs.getConfigFile().getString("storage.user");
+        String pass = Configs.getConfigFile().getString("storage.pass");
+        String host = Configs.getConfigFile().getString("storage.host");
+        String db = Configs.getConfigFile().getString("storage.db");
+        Integer port = Configs.getConfigFile().getInt("storage.port");
+        dbManager = new DatabaseManager(this);
+        dbManager.initMySQL(
+                host,
+                db,
+                user,
+                pass
+        );
+        dbManager.startConnection();
+        dbManager.createTable(dbManager, "neroprestige", "uuid varchar(255) primary key,"+" name varchar(16) not null, "+"prestige bigint,"+"points bigint");
+    }
+
     public void loadEvents(){
 
-        Bukkit.getPluginManager().registerEvents(new PlayerEvents(), this);
-        Bukkit.getPluginManager().registerEvents(new InventoryEvents(), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerEvents(this), this);
+        Bukkit.getPluginManager().registerEvents(new InventoryEvents(this), this);
     }
 
     public void loadCommands(){
-        getCommand("ppoints").setExecutor(new PlayerCommands());
-        getCommand("prestigios").setExecutor(new PlayerCommands());
-        getCommand("setppoints").setExecutor(new PlayerCommands());
-        getCommand("prestigio").setExecutor(new PlayerCommands());
-        getCommand("addppoints").setExecutor(new PlayerCommands());
-        getCommand("addprestige").setExecutor(new PlayerCommands());
-        getCommand("setprestige").setExecutor(new PlayerCommands());
+        getCommand("ppoints").setExecutor(new PlayerCommands(this));
+        getCommand("prestigios").setExecutor(new PlayerCommands(this));
+        getCommand("setppoints").setExecutor(new PlayerCommands(this));
+        getCommand("prestigio").setExecutor(new PlayerCommands(this));
+        getCommand("addppoints").setExecutor(new PlayerCommands(this));
+        getCommand("addprestige").setExecutor(new PlayerCommands(this));
+        getCommand("setprestige").setExecutor(new PlayerCommands(this));
     }
 
-    public static DBConnection getDbConnection() {
-        return dbConnection;
-    }
-
-    public static HashMap<String, PrestigePlayer> getHashPlayer() {
-        return hashPlayer;
-    }
-
-    public static ArrayList<PrestigePlayer> getAltPlayer() {
-        return altPlayer;
-    }
 }

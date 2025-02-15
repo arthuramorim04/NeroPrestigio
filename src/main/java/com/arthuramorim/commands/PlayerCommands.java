@@ -1,7 +1,6 @@
 package com.arthuramorim.commands;
 
-import com.arthuramorim.Main;
-import com.arthuramorim.controllers.PlayerController;
+import com.arthuramorim.NeroPrestigio;
 import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.menus.Menus;
 import com.arthuramorim.utils.StringColor;
@@ -13,6 +12,13 @@ import org.bukkit.entity.Player;
 
 public class PlayerCommands implements CommandExecutor {
 
+    private final NeroPrestigio plugin;
+    private final Menus menus;
+
+    public PlayerCommands(NeroPrestigio plugin) {
+        this.plugin = plugin;
+        menus = new Menus(plugin);
+    }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -26,20 +32,20 @@ public class PlayerCommands implements CommandExecutor {
 
             if (command.getName().equalsIgnoreCase("prestigio")) {
 
-                Menus.mainMenuPrestige(p);
+                menus.mainMenuPrestige(p);
 
             }
 
             if (command.getName().equalsIgnoreCase("ppoints")) {
 
                 try {
-                    PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+                    PrestigePlayer player = this.plugin.getHashPlayer().get(p.getName());
                     p.sendMessage(StringColor.color("\n&ePontos de Prestigio: &f" + player.getPoints() + "\n"));
                     return false;
 
                 } catch (NullPointerException e) {
-                    PlayerController.loadPlayer(p.getName(), p.getUniqueId());
-                    PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+                    this.plugin.getPc().loadPlayer(p.getName(), p.getUniqueId());
+                    PrestigePlayer player = this.plugin.getHashPlayer().get(p.getName());
                     p.sendMessage(StringColor.color("\n&ePontos de Prestigio: &f" + player.getPoints() + "\n"));
                     return false;
                 } catch (Exception e) {
@@ -51,14 +57,14 @@ public class PlayerCommands implements CommandExecutor {
                 if (command.getName().equalsIgnoreCase("prestigios")) {
                     try {
 
-                        PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+                        PrestigePlayer player = this.plugin.getHashPlayer().get(p.getName());
                         p.sendMessage(StringColor.color("\n&ePrestigios : &f" + player.getPrestige()));
                         return false;
 
                     } catch (NullPointerException e) {
 
-                        PlayerController.loadPlayer(p.getName(), p.getUniqueId());
-                        PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+                        this.plugin.getPc().loadPlayer(p.getName(), p.getUniqueId());
+                        PrestigePlayer player = this.plugin.getHashPlayer().get(p.getName());
                         p.sendMessage(StringColor.color("\n&ePrestigios : &f" + player.getPrestige()));
                         return false;
 
@@ -81,11 +87,11 @@ public class PlayerCommands implements CommandExecutor {
                             p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
                             return false;
                         }
-                        PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                        PrestigePlayer player = this.plugin.getHashPlayer().get(target.getName());
                         player.setPoints(quantity);
                         target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
                         sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
-                        Main.getAltPlayer().add(player);
+                        this.plugin.getAltPlayer().add(player);
                         return false;
 
                     } catch (NullPointerException e) {
@@ -96,12 +102,12 @@ public class PlayerCommands implements CommandExecutor {
                             p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
                             return false;
                         }
-                        PlayerController.loadPlayer(target.getName(), target.getUniqueId());
-                        PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                        this.plugin.getPc().loadPlayer(target.getName(), target.getUniqueId());
+                        PrestigePlayer player = this.plugin.getHashPlayer().get(target.getName());
                         player.setPoints(quantity);
                         target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
                         sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
-                        Main.getAltPlayer().add(player);
+                        this.plugin.getAltPlayer().add(player);
                         return false;
 
                     } catch (Exception e) {
@@ -118,11 +124,11 @@ public class PlayerCommands implements CommandExecutor {
                             p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
                             return false;
                         }
-                        PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                        PrestigePlayer player = this.plugin.getHashPlayer().get(target.getName());
                         player.addPoints(quantity);
                         target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
                         sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
-                        Main.getAltPlayer().add(player);
+                        this.plugin.getAltPlayer().add(player);
                         return false;
 
                     } catch (NullPointerException e) {
@@ -133,12 +139,12 @@ public class PlayerCommands implements CommandExecutor {
                             p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
                             return false;
                         }
-                        PlayerController.loadPlayer(target.getName(), target.getUniqueId());
-                        PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                        this.plugin.getPc().loadPlayer(target.getName(), target.getUniqueId());
+                        PrestigePlayer player = this.plugin.getHashPlayer().get(target.getName());
                         player.addPoints(quantity);
                         target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &ade pontos de prestigio!\n"));
                         sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce enviou &f" + quantity + " &ade pontos de prestigio para o jogador &f" + target.getName()));
-                        Main.getAltPlayer().add(player);
+                        this.plugin.getAltPlayer().add(player);
                         return false;
 
                     } catch (Exception e) {
@@ -155,11 +161,11 @@ public class PlayerCommands implements CommandExecutor {
                             p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
                             return false;
                         }
-                        PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                        PrestigePlayer player = this.plugin.getHashPlayer().get(target.getName());
                         player.addPrestige(quantity);
                         target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
                         sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce adicionou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
-                        Main.getAltPlayer().add(player);
+                        this.plugin.getAltPlayer().add(player);
                         return false;
 
                     } catch (NullPointerException e) {
@@ -170,12 +176,12 @@ public class PlayerCommands implements CommandExecutor {
                             p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
                             return false;
                         }
-                        PlayerController.loadPlayer(target.getName(), target.getUniqueId());
-                        PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                        this.plugin.getPc().loadPlayer(target.getName(), target.getUniqueId());
+                        PrestigePlayer player = this.plugin.getHashPlayer().get(target.getName());
                         player.addPrestige(quantity);
                         target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
                         sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce adicionou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
-                        Main.getAltPlayer().add(player);
+                        this.plugin.getAltPlayer().add(player);
                         return false;
 
                     } catch (Exception e) {
@@ -193,11 +199,11 @@ public class PlayerCommands implements CommandExecutor {
                             p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
                             return false;
                         }
-                        PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                        PrestigePlayer player = this.plugin.getHashPlayer().get(target.getName());
                         player.setPrestige(quantity);
                         target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
                         sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce setou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
-                        Main.getAltPlayer().add(player);
+                        this.plugin.getAltPlayer().add(player);
                         return false;
 
                     } catch (NullPointerException e) {
@@ -208,12 +214,12 @@ public class PlayerCommands implements CommandExecutor {
                             p.sendMessage(StringColor.color("&e[Prestigio] &cJogador nao existe."));
                             return false;
                         }
-                        PlayerController.loadPlayer(target.getName(), target.getUniqueId());
-                        PrestigePlayer player = Main.getHashPlayer().get(target.getName());
+                        this.plugin.getPc().loadPlayer(target.getName(), target.getUniqueId());
+                        PrestigePlayer player = this.plugin.getHashPlayer().get(target.getName());
                         player.setPrestige(quantity);
                         target.sendMessage(StringColor.color("\n&e[Prestigio] &aVoce recebeu &f" + quantity + " &aprestigio!\n"));
                         sender.sendMessage(StringColor.color("&e[Prestigio] &aVoce setou &f" + quantity + " &aprestigios para o jogador &f" + target.getName()));
-                        Main.getAltPlayer().add(player);
+                        this.plugin.getAltPlayer().add(player);
                         return false;
 
                     } catch (Exception e) {

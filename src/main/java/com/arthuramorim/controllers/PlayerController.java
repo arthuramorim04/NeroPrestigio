@@ -1,21 +1,26 @@
 package com.arthuramorim.controllers;
 
-import com.arthuramorim.Main;
+import com.arthuramorim.NeroPrestigio;
+import com.arthuramorim.database.sql.DatabaseManager;
 import com.arthuramorim.entity.PrestigePlayer;
 import com.arthuramorim.utils.StringColor;
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.UUID;
 
 public class PlayerController {
 
-    private static Connection con = Main.getDbConnection().getConnection();
+    private final DatabaseManager dbManager;
+    private final NeroPrestigio plugin;
 
-    public static void registerNewPlayer(String name, UUID uuid) {
+    public PlayerController(NeroPrestigio plugin) {
+        this.plugin = plugin;
+        this.dbManager = this.plugin.getDbManager();
+    }
+
+    //reescrever
+    public void registerNewPlayer(String name, UUID uuid) {
 
         PrestigePlayer p = new PrestigePlayer(name, uuid);
 
@@ -24,23 +29,25 @@ public class PlayerController {
             PreparedStatement ps;
 
             if (p.getName() != null) {
-                ps = con.prepareStatement("insert into neroprestige" +
-                        "(name, uuid, prestige,points)" +
-                        "values ('" + p.getName() + "','" + p.getUuid() + "','" + p.getPrestige() + "','" + p.getPoints() + "')");
-
-                ps.execute();
-                loadPlayer(name, uuid);
+                String insertQuery = "INSERT INTO neroprestige (name, uuid, prestige, points) VALUES (?,?,?,?)";
+                ps = dbManager.getSql().prepareStatement(insertQuery);
+                ps.setString(1, name);
+                ps.setString(2, String.valueOf(uuid));
+                ps.setInt(3, 0);
+                ps.setInt(4, 0);
+                int row = ps.executeUpdate();
                 ps.close();
+                loadPlayer(name, uuid);
 
             }
 
         } catch (Exception e) {
-
+            e.getStackTrace();
         }
 
     }
 
-    public static void loadPlayer(String name, UUID uuid) {
+    public void loadPlayer(String name, UUID uuid) {
 
         PrestigePlayer p = new PrestigePlayer(name, uuid);
 
@@ -48,10 +55,8 @@ public class PlayerController {
 
             PreparedStatement ps;
             ResultSet result;
-            ps = con.prepareStatement("select * from neroprestige" +
+            result = dbManager.getSql().query("select * from neroprestige" +
                     " where  uuid = '" + p.getUuid() + "'");
-
-            result = ps.executeQuery();
 
             while (result.next()) {
 
@@ -59,17 +64,15 @@ public class PlayerController {
                 Integer points = result.getInt("points");
                 p.setPoints(points);
                 p.setPrestige(prestige);
-                Main.getHashPlayer().put(p.getName(), p);
+                this.plugin.getHashPlayer().put(p.getName(), p);
 
             }
             if (!result.next()) {
                 registerNewPlayer(name, uuid);
             }
-
-            ps.close();
         } catch (Exception e) {
 
-            Main.plugin.getServer().getConsoleSender().sendMessage(StringColor.color("&c[LoadPlayer] Nao foi possivel carregar o player \n" +
+            NeroPrestigio.plugin.getServer().getConsoleSender().sendMessage(StringColor.color("&c[LoadPlayer] Nao foi possivel carregar o player \n" +
                     "Nome: " + p.getName() + "\n " +
                     "UUID: " + p.getUuid() + "\nErro inesperado: " + e.getMessage()));
 
@@ -79,20 +82,20 @@ public class PlayerController {
     }
 
 
-    private static void savePlayer(PrestigePlayer p) {
+    private void savePlayer(PrestigePlayer p) {
 
 
         try {
 
             PreparedStatement ps;
 
-            ps = con.prepareStatement("update neroprestige set prestige = " + p.getPrestige() + ", points = " + p.getPoints() + " where uuid = '" + p.getUuid() + "'");
+            ps = dbManager.getSql().prepareStatement("update neroprestige set prestige = " + p.getPrestige() + ", points = " + p.getPoints() + " where uuid = '" + p.getUuid() + "'");
             ps.execute();
             ps.close();
 
         } catch (Exception e) {
 
-            Main.plugin.getServer().getConsoleSender().sendMessage(StringColor.color("&c[] Nao foi possivel salvar o player \n" +
+            NeroPrestigio.plugin.getServer().getConsoleSender().sendMessage(StringColor.color("&c[] Nao foi possivel salvar o player \n" +
                     "Nome: " + p.getName() + "\n" +
                     "UUID: " + p.getUuid() + "\nErro inesperado: " + e.getMessage()));
 
@@ -100,19 +103,15 @@ public class PlayerController {
     }
 
 
-    public static void savePlayerOnLeft(String name) {
-
-        PrestigePlayer player = Main.getHashPlayer().get(name);
+    public void savePlayerOnLeft(String name) {
+        PrestigePlayer player = this.plugin.getHashPlayer().get(name);
         savePlayer(player);
-        Main.getHashPlayer().remove(player);
-        return;
+        this.plugin.getHashPlayer().remove(player);
 
     }
 
-    public static void savePlayerTask(PrestigePlayer p) {
-
-        PrestigePlayer player = Main.getHashPlayer().get(p.getName());
+    public void savePlayerTask(PrestigePlayer p) {
+        PrestigePlayer player = this.plugin.getHashPlayer().get(p.getName());
         savePlayer(player);
-
     }
 }
